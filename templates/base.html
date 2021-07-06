@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <nav class="nav extended text-shadow teal darken-1">
+        <nav class="nav extended text-shadow cyan darken-1">
             <!--Top Navbar-->
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo">The Cook Book</a>
@@ -25,7 +25,7 @@
                     <li><a href="">Manage Categories</a></li>
                     <li><a href="">Logout</a></li>
                     <li><a href="">Login</a></li>
-                    <li><a href="">Register</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,7 +38,7 @@
                     <li><a href="">Manage Categories</a></li>
                     <li><a href="">Logout</a></li>
                     <li><a href="">Login</a></li>
-                    <li><a href="">Register</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
           </ul>
     </header>
     
