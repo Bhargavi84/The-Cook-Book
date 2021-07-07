@@ -56,15 +56,56 @@
         
     </section>
     <main class="main container">
-    {% block content %}
-    {% endblock %}    
+        {% block content %}
+        {% endblock %}    
     </main>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="{{ url_for('static', filename='js/script.js')  }}"></script>
-{% block scripts %} 
-{% endblock %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/script.js')  }}"></script>
+    {% block scripts %} 
+    {% endblock %}
+
+<!-- Footer -->
+<div id="footer">
+    <footer>
+        <div class="container-fluid">
+            <div class="row footer-items">
+                <div class="col s12 center-align">
+                    <ul class="social">
+                        <li>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li><a href="https://www.instagram.com" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li><a href="https://www.twitter.com" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li><a href="https://www.pintrest.com" target="_blank">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                        </li>
+                    </ul>
+                    <br>
+                    <p class="copyright">
+                        <medium>&copy; Copyright 2021 The Cook Book </medium>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <!-- Footer end-->
+
+
+
 </body>
 </html>
