@@ -6,7 +6,7 @@
         {{ recipe.recipe_name }}<br>
         {{ recipe.category_name }}<br>
         {{ recipe.recipe_ingredients }}<br>
-        {{ recipe.recipe_directions }}<br>
+        {{ recipe.recipe_instructions }}<br>
         {{ recipe.recipe_serves }}<br>
     {% endfor %}
 
@@ -20,7 +20,7 @@
             </div>
             <div class="collapsible-body">
                 <strong>{{ recipe.category_name }}</strong>
-                <p>{{ recipe.recipe_directions }}</p>
+                <p>{{ recipe.recipe_instructions }}</p>
         </li>
         <li>
         {% endfor %}
