@@ -3,24 +3,24 @@
 
 <h3 class="light-blue-text text-darken-4 center-align">All Recipes</h3>
     
-    <ul class="collapsible">
-        {% for recipe in recipes %}
-        <li>
-            <div class="collapsible-header white-text cyan darken-3 text-shadow">
-                <i class="fas fa-caret-down"></i>
-                <strong>{{ recipe.recipe_name }}</strong>
-            </div>
+<ul class="collapsible">
+    {% for recipe in recipes %}
+    <li>
+        <div class="collapsible-header white-text cyan darken-3 text-shadow">
+            <i class="fas fa-caret-down"></i>
+            <strong>{{ recipe.recipe_name }}</strong>
+        </div>
 
-            <div class="collapsible-body">
-                <strong>{{ recipe.category_name }}</strong>
-                <p>{{ recipe.recipe_instructions }}</p>
-                <P><em>by: {{ recipe.created_by }}</em></P>
-            </div>
+        <div class="collapsible-body">
+            <strong>{{ recipe.category_name }}</strong>
+            <p>{{ recipe.recipe_instructions }}</p>
+            <P><em>by: {{ recipe.created_by }}</em></P>
+        </div>
 
-        </li>
-        <li>
-        {% endfor %}
-    </ul>
+    </li>
+    <li>
+    {% endfor %}
+</ul>
 
 
 {% endblock %}
