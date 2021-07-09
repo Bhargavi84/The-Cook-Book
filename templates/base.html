@@ -32,6 +32,7 @@
                 </ul>
             </div>
         </nav>
+
         <!--Mobile Side navbar-->
         <ul class="sidenav" id="mobile-demo">
                     <li><h4 class="center-align light-blue-text text-darken-4">The Cook Book</h4></li>
@@ -47,21 +48,23 @@
                     {% endif %}
           </ul>
     </header>
+
     <section>
         <!--flash messages-->
         <!--Falsh messages-->
         {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <div class="row flashes">
-            <h4 class="light-blue darken-2 center-align">{{ message }}</h4>
-        </div>
-        {% endfor %}
-        {% endif %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="light-blue darken-2 center-align">{{ message }}</h4>
+                     </div>
+                {% endfor %}
+            {% endif %}
         {% endwith %}
         
     </section>
-    <main class="main container">
+
+    <main class="container">
         {% block content %}
         {% endblock %}    
     </main>
@@ -76,40 +79,40 @@
     {% endblock %}
 
 <!-- Footer -->
+<footer>
 <div id="footer">
-    <footer>
-        <div class="container-fluid">
-            <div class="row footer-items">
-                <div class="col s12 center-align">
-                    <ul class="social">
-                        <li>
-                            <a href="https://www.facebook.com" target="_blank">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li><a href="https://www.instagram.com" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li><a href="https://www.twitter.com" target="_blank">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li><a href="https://www.pintrest.com" target="_blank">
-                            <i class="fab fa-pinterest"></i>
+    <div class="container">
+        <div class="row footer-items col s12 center-align">
+            <ul class="social">
+                 <li>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                    </li>
+                    <li><a href="https://www.twitter.com" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                         </a>
+                    </li>
+                    <li><a href="https://www.pintrest.com" target="_blank">
+                        <i class="fab fa-pinterest"></i>
                         </a>
-                        </li>
-                    </ul>
+                    </li>
+            </ul>
                     <br>
                     <p class="copyright">
-                        <medium>&copy; Copyright 2021 The Cook Book </medium>
+                        <medium>&copy; Copyright The Cook Book 2021 </medium>
                     </p>
-                </div>
             </div>
         </div>
-    </footer>
     </div>
-    <!-- Footer end-->
+</footer>
+    
+<!-- Footer end-->
 
 
 
