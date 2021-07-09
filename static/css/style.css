@@ -10,12 +10,18 @@
     line-height: 2;
 }
 
+/*---------------------Add recipe--------------*/
+
+.input-field.col.s12 label {
+	padding-left: 0.5rem;
+}
+
+
 /*---------------------Footer--------------*/
 
 #footer {
 	width: 100%;
 	background-color: #00acc1;
-	position: absolute;
 	bottom: 0;
 	
     
@@ -56,3 +62,7 @@ ul.social li a i {
 	color: #fff;
 	padding: 0;
 }
+
+
+
+
