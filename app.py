@@ -25,6 +25,13 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes= list(mongo.db.tasks.find({"$text": {"$search": query}}))
+    return render_template("recipes.html", recipes=recipes)
+
+
 @app.route("/register", methods=["GET","POST"])
 def register():
     if request.method == "POST":
@@ -115,7 +122,12 @@ def add_recipe():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
 
-    
+@app.route("/edit_recipe/<recipe_id>", methods=["GET","POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId()})
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 if __name__== "__main__":
     app.run(host=os.environ.get("IP"), 
