@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!--Show recipe Heading-->
+
+    <div class="row">
+        <div class="col s12 center-align light-blue-text text-darken-4">
+            <h2>{{ recipes.recipe_name }}</h2>
+           <p><i class="fas fa-concierge-bell"></i> {{ recipes.category_name }}</p>
+       </div>
+   </div>
+
+   <!-- Show Recipe Image row-->
+
+   <div class="row">
+    <div class="col s12 show-recipe-img center-align">
+        <img src="{{ recipes.recipe_img }}" alt="image uploaded by user WRT the recipe">
+    </div>
+    </div>
+
+    <!-- Show Recipe Prep, Cook and Serves row-->
+
+    <div class="row">
+       <div id ="total-time">
+          <div class="col s4 center-align prep-time light-blue-text text-darken-4">
+            <p><i class="fas fa-hourglass-start"></i> <strong>Prep:</strong> {{ recipes.prep_time }} min</p>
+         </div>
+          <div class="col s4 center-align cook-time light-blue-text text-darken-4">
+            <p><i class="fab fa-gripfire"></i> <strong>Cook:</strong> {{ recipes.cook_time }} min</p>
+         </div>
+          <div class="col s4 center-align serves light-blue-text text-darken-4">
+            <p><i class="fas fa-user-friends"></i> <strong>Serves:</strong> {{ recipes.serves }}</p>
+           </div>
+        </div>
+    </div>
+
+    <!-- Show Recipe  Ingredients and Instructions row-->
+
+
+    <div class="row">
+        <div class="col s12 m5">
+          <div class="card-panel grey lighten-4 light-blue-text text-darken-4">
+            
+                <h6>Ingredients List : <i class="fas fa-tasks left hide-on-small-only"></i></h6>
+                {% for ingredients in recipes.recipe_ingredients %}
+                <p>{{- ingredients -}}</p>
+                {% endfor %}
+            
+          </div>
+        </div>
+     
+        <div class="col s12 m5">
+          <div class="card-panel grey lighten-4 light-blue-text text-darken-4   ">
+            
+                <h6>Instructions : <i class="fas fa-chalkboard-teacher left hide-on-small-only"></i></h6>
+            {% for instructions in recipes.recipe_instructions %}
+                <p>{{- instructions -}}</p>
+            {% endfor %}
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+{% endblock %}

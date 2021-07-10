@@ -8,7 +8,7 @@ body{
 
 .nav-wrapper .brand-logo{
 	font-size: 1.5rem;
-	margin-left: 5px;
+	margin-left: 10px;
 }
 
 
@@ -37,7 +37,8 @@ body{
 
 .recipe-card .card-image img {
 	width: 100%;
-	height: 250px;
+	height: 265px;
+	object-fit: cover;
 }
 
 .collapsible-header .col strong{
@@ -46,12 +47,24 @@ body{
 }
 
 
+.show-recipe-img img {
+	width: 40%;
+	
+}
+
+#total-time {
+	font-size: 20px;
+	padding:0;
+}
+
 
 /*---------------------Add recipe--------------*/
 
 .input-field.col.s12 label {
 	padding-left: 0.5rem;
 }
+
+
 
 
 /*---------------------Footer--------------*/

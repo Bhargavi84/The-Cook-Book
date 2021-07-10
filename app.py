@@ -25,6 +25,13 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/show_recipe/<recipe_id>")
+def show_recipe(recipe_id):
+    recipe_details = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    return render_template("show_recipe.html", recipes=recipe_details, page_title="Show Recipe")
+
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -107,8 +114,8 @@ def add_recipe():
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_ingredients": request.form.get("recipe_ingredients"),
-            "recipe_instructions": request.form.get("recipe_instructions"),
+            "recipe_ingredients": request.form.get("recipe_ingredients").splitlines(),
+            "recipe_instructions": request.form.get("recipe_instructions").splitlines(),
             "recipe_img" : request.form.get("recipe_img"),
             "cook_time": request.form.get("cook_time"),
             "serves": request.form.get("serves"),
@@ -128,9 +135,10 @@ def edit_recipe(recipe_id):
         submit = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
-            "recipe_ingredients": request.form.get("recipe_ingredients"),
-            "recipe_instructions": request.form.get("recipe_instructions"),
+            "recipe_ingredients": request.form.get("recipe_ingredients").splitlines(),
+            "recipe_instructions": request.form.get("recipe_instructions").splitlines(),
             "recipe_img" : request.form.get("recipe_img"),
+            "prep_time" : request.form.get("prep_time"),
             "cook_time": request.form.get("cook_time"),
             "serves": request.form.get("serves"),
             "created_by": session["user"]
