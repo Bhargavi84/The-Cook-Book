@@ -38,30 +38,39 @@
 
 
     <div class="row">
-        <div class="col s12 m5">
-          <div class="card-panel grey lighten-4 light-blue-text text-darken-4">
-            
-                <h6>Ingredients List : <i class="fas fa-tasks left hide-on-small-only"></i></h6>
-                {% for ingredients in recipes.recipe_ingredients %}
-                <p>{{- ingredients -}}</p>
-                {% endfor %}
-            
-          </div>
-        </div>
-     
-        <div class="col s12 m5">
-          <div class="card-panel grey lighten-4 light-blue-text text-darken-4   ">
-            
-                <h6>Instructions : <i class="fas fa-chalkboard-teacher left hide-on-small-only"></i></h6>
-            {% for instructions in recipes.recipe_instructions %}
-                <p>{{- instructions -}}</p>
-            {% endfor %}
-            
-          </div>
+      <div class="col s5 m5">
+        <div class="light-blue-text text-darken-4">
+    
+          <h6>Ingredients List : <i class="fas fa-tasks left hide-on-small-only"></i></h6>
+          {% for ingredients in recipes.recipe_ingredients %}
+          <p>{{- ingredients -}}</p>
+          {% endfor %}
+    
         </div>
       </div>
-    </div>
-
+     
+        <div class="col s5 m5">
+          <div class="light-blue-text text-darken-4   ">
+        
+            <h6>Instructions : <i class="fas fa-chalkboard-teacher left hide-on-small-only"></i></h6>
+            {% for instructions in recipes.recipe_instructions %}
+            <p>{{- instructions -}}</p>
+            {% endfor %}
+        
+          </div>
+        </div>
+        </div>
     
+  <!-- Edit and Delete row-->
 
+      <div class="row"> 
+      <div class="col s12 m12 center-align">
+        {% if session.user|lower == recipes.created_by|lower %}
+        <a href="{{ url_for('delete_recipe', recipe_id=recipes._id) }}" class="btn-small  red lighten-1">Delete</a>
+        <a href="{{ url_for('edit_recipe', recipe_id=recipes._id) }}" class="btn-small green lighten-1">Edit</a>
+        {% endif %}
+      </div>
+      
+    </div>
+  
 {% endblock %}
