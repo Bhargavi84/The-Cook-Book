@@ -63,14 +63,34 @@
     
   <!-- Edit and Delete row-->
 
-      <div class="row"> 
+    <div class="row"> 
       <div class="col s12 m12 center-align">
-        {% if session.user|lower == recipes.created_by|lower %}
-        <a href="{{ url_for('delete_recipe', recipe_id=recipes._id) }}" class="btn-small  red lighten-1">Delete</a>
-        <a href="{{ url_for('edit_recipe', recipe_id=recipes._id) }}" class="btn-small green lighten-1">Edit</a>
+        {% if session.user|lower == recipes.created_by|lower or session.user |lower == "admin"|lower %}
+        
+        <a class="waves-effect waves-light btn-small red modal-trigger" href="#modal1">Delete
+        <i class="fas fa-times right"></i></a>
+        <a href="{{ url_for('edit_recipe', recipe_id=recipes._id) }}" class="btn-small green lighten-1">Edit<i class="fas fa-edit right"></a>
+        
+        
         {% endif %}
-      </div>
-      
+      </div>     
     </div>
   
+    <!-- Modal Structure from MaterializeCSS-->
+    
+   
+    
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Do you want to delete <strong>{{ recipes.recipe_name }} recipe? </strong></h4>
+          <p>Your recipe will be deleted from the page.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="{{ url_for('delete_recipe', recipe_id=recipes._id) }}" 
+            class="modal-close waves-effect waves-green btn-flat">Agree</a>
+          <a href="" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      
+        </div>
+      </div>
+
 {% endblock %}
