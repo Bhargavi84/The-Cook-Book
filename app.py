@@ -31,7 +31,7 @@ def show_recipe(recipe_id):
     
     if 'user' not in session:
         return redirect(url_for('login'))
-        
+
     return render_template("show_recipe.html", recipes=recipe_details, page_title="Show Recipe")
 
 
@@ -94,15 +94,18 @@ def login():
 
     return render_template("login.html")
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
-    # grab the session user's username from the db
-    username = mongo.db.users.find_one({"username": session["user"]})["username"]
 
-    if session["user"]:
-        return render_template("profile.html", username=username)
+
+@app.route("/profile", methods=["GET", "POST"])
+def profile():
+
+    if "user" not in session:
+        return redirect(url_for("login"))
     
-    return redirect(url_for("login"))
+    recipes = mongo.db.recipes.find({"created_by": session["user"]}).sort("_id", 1)
+    return render_template("profile.html", username=session["user"], recipes=recipes)
+    
+   
 
 @app.route("/logout")
 def logout():
@@ -132,6 +135,7 @@ def add_recipe():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
+
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET","POST"])
 def edit_recipe(recipe_id):
@@ -183,6 +187,7 @@ def add_category():
         return redirect(url_for("get_categories"))   
 
     return render_template("add_category.html")
+
 
 @app.route("/edit_category/<category_id>", methods=["GET","POST"])
 def edit_category(category_id):
