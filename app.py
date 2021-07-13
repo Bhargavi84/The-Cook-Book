@@ -28,6 +28,10 @@ def get_recipes():
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
     recipe_details = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    
+    if 'user' not in session:
+        return redirect(url_for('login'))
+        
     return render_template("show_recipe.html", recipes=recipe_details, page_title="Show Recipe")
 
 
