@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class = "light-blue-text text-darken-4 center-align">Edit Recipe</h3>
+<h3 class="light-blue-text text-darken-4 center-align">Edit Recipe</h3>
 
 <div class="row card-panel grey lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
@@ -14,24 +14,24 @@
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled>Choose your Category</option>
                     {% for category in categories %}
-                        {% if category.category_name == recipe.category_name %}
-                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                        {% else %}
-                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                        {% endif %}
+                    {% if category.category_name == recipe.category_name %}
+                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                    {% else %}
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
                 <label for="category_name">Recipe Category</label>
             </div>
         </div>
-    
+
         <!--Name of the Recipe-->
 
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-utensils prefix light-blue-text text-darken-4"></i>
-                <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="500" 
-                value="{{ recipe.recipe_name }}" class="validate" required>
+                <input id="recipe_name" name="recipe_name" type="text" minlength="5" maxlength="500"
+                    value="{{ recipe.recipe_name }}" class="validate" required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
@@ -40,9 +40,9 @@
 
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-list-ol prefix light-blue-text text-darken-4"></i> 
-                <textarea id="recipe_ingredients" name="recipe_ingredients"  minlength="5" maxlength="5000" class="validate"
-                    required>
+                <i class="fas fa-list-ol prefix light-blue-text text-darken-4"></i>
+                <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5" maxlength="5000"
+                    class="validate" required>
                         {{- recipe.recipe_ingredients -}}
                     </textarea>
                 <label for="recipe_ingredients">List of Ingredients</label>
@@ -54,8 +54,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-chalkboard-teacher prefix light-blue-text text-darken-4"></i>
-                <textarea id="recipe_instructions" name="recipe_instructions" minlength="5" maxlength="5000" class="validate"
-                    required>
+                <textarea id="recipe_instructions" name="recipe_instructions" minlength="5" maxlength="5000"
+                    class="validate" required>
                     {{- recipe.recipe_instructions -}}
                 </textarea>
                 <label for="recipe_instructions">Instructions</label>
@@ -67,7 +67,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="far fa-image prefix light-blue-text text-darken-4"></i>
-                <input id="recipe_img" name="recipe_img" type="url" value="{{ recipe.recipe_img }}" minlength="5" maxlength="300" class="validate">
+                <input id="recipe_img" name="recipe_img" type="url" value="{{ recipe.recipe_img }}" minlength="5"
+                    maxlength="300" class="validate">
                 <label for="recipe_img">Paste your recipe image URL here</label>
             </div>
         </div>
@@ -77,35 +78,38 @@
         <div class="row">
             <div class="input-field col s3">
                 <i class="fas fa-hourglass prefix light-blue-text text-darken-4"></i>
-                <input id="prep_time" name="prep_time" type="number" value="{{ recipe.prep_time}}"min="0" max="120" class="validate" required>
+                <input id="prep_time" name="prep_time" type="number" value="{{ recipe.prep_time}}" min="0" max="120"
+                    class="validate" required>
                 <label for="prep_time">Preperation Time</label>
             </div>
-        <div class="row">
-            <div class="input-field col s3">
+            <div class="row">
+                <div class="input-field col s3">
                     <i class="fab fa-gripfire prefix light-blue-text text-darken-4"></i>
-                    <input id="cook_time" name="cook_time" type="number" value="{{ recipe.cook_time}}"min="0" max="120" class="validate">
+                    <input id="cook_time" name="cook_time" type="number" value="{{ recipe.cook_time}}" min="0" max="120"
+                        class="validate">
                     <label for="cook_time">Cook Time</label>
+                </div>
+                <div class="input-field col s3">
+                    <i class="fas fa-user-friends prefix light-blue-text text-darken-4"></i>
+                    <input id="serves" name="serves" type="number" value="{{ recipe.serves}}" min="1" max="10"
+                        class="validate" required>
+                    <label for="serves">Serves</label>
+                </div>
             </div>
-        <div class="input-field col s3">
-                <i class="fas fa-user-friends prefix light-blue-text text-darken-4"></i>
-                <input id="serves" name="serves" type="number" value="{{ recipe.serves}}" min="1" max="10" class="validate" required>
-                <label for="serves">Serves</label>
-            </div>
-        </div>
 
-        <!--Submit Button-->
+            <!--Submit Button-->
 
-        <div class="row">
-            <div class="col s12 center-align">
-                <!--Cancel all changes button-->
-                <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn-large red text-shadow">
-                    Cancel <i class="fas fa-times-circle right"></i>
-                </a>
-                <button type="submit" class="btn-large white-text text-darken-4 text">
-                    Edit Recipe <i class="fas fa-edit right"></i>
-                </button>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <!--Cancel all changes button-->
+                    <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn-large red text-shadow">
+                        Cancel <i class="fas fa-times-circle right"></i>
+                    </a>
+                    <button type="submit" class="btn-large white-text text-darken-4 text">
+                        Edit Recipe <i class="fas fa-edit right"></i>
+                    </button>
+                </div>
             </div>
-        </div>
 
     </form>
 </div>

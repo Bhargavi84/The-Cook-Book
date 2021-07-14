@@ -1,115 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
     <title>The Cook Book</title>
 </head>
+
 <body>
     <header>
+        <!--Top Navbar-->
+
         <nav class="nav extended text-shadow orange darken-3">
-            <!--Top Navbar-->
             <div class="nav-wrapper">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo">The Cook Book</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
                     {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                        <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
-                        {% if session.user|lower == "admin"|lower %}
-                        <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
-                        {% endif %}
-                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                    <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
+                    {% if session.user|lower == "admin"|lower %}
+                    <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+                    {% endif %}
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
                     {% else %}
-                        <li><a href="{{ url_for('login') }}">Login</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
 
         <!--Mobile Side navbar-->
+
         <ul class="sidenav" id="mobile-demo">
-                    <li><h4 class="center-align light-blue-text text-darken-4">The Cook Book</h4></li>
-                    <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
-                    {% if session.user %}
-                        <li><a href="{{ url_for('profile', username=session['user']) }}">Pofile</a></li>
-                        <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
-                        {% if session.user|lower == "admin"|lower %}
-                        <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
-                        {% endif %}
-                        <li><a href="{{ url_for('logout') }}">Logout</a></li>
-                    {% else %}
-                        <li><a href="{{ url_for('login') }}">Login</a></li>
-                        <li><a href="{{ url_for('register') }}">Register</a></li>
-                    {% endif %}
-          </ul>
+            <li>
+                <h4 class="center-align light-blue-text text-darken-4">The Cook Book</h4>
+            </li>
+            <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+            {% if session.user %}
+            <li><a href="{{ url_for('profile', username=session['user']) }}">Pofile</a></li>
+            <li><a href="{{ url_for('add_recipe') }}">New Recipe</a></li>
+            {% if session.user|lower == "admin"|lower %}
+            <li><a href="{{ url_for('get_categories') }}">Manage Categories</a></li>
+            {% endif %}
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+            {% else %}
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+            {% endif %}
+        </ul>
     </header>
 
     <section>
-        <!--flash messages-->
-        <!--Falsh messages-->
+        <!--Flash messages-->
+
         {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="light-green darken-2 center-align">{{ message }}</h4>
-                     </div>
-                {% endfor %}
-            {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes">
+            <h4 class="light-green darken-2 center-align">{{ message }}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
         {% endwith %}
-        
+
     </section>
+
+
+    <!--Main-->
 
     <main class="container">
         {% block content %}
-        {% endblock %}    
+        {% endblock %}
     </main>
-    
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename='js/script.js')  }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    {% block scripts %} 
+    {% block scripts %}
     {% endblock %}
 
 
-<!--Footer-->
-    
-<!-- Footer -->
-      <div id="footer">
-         <footer>
+    <!-- Footer -->
+
+    <div id="footer">
+        <footer>
             <div class="container-fluid orange darken-3">
-               <div class="row footer-items ">
-                  <div class="col s12 center-align ">
-                     <ul class="social">
-                        <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook pr-2"
-                           aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
-                        <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram" 
-                           aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
-                        <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter pl-2" 
-                           aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
-                        <li><a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest pl-2" 
-                            aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
-                     </ul>
-                     <br>
-                     <p class="copyright"><small>&copy; Copyright 2021 The Cook Book </small></p>
-                  </div>
-               </div>
+                <div class="row footer-items ">
+                    <div class="col s12 center-align ">
+                        <ul class="social">
+                            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook pr-2"
+                                        aria-hidden="true"></i><span class="sr-only">Facebook</span></a></li>
+                            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"
+                                        aria-hidden="true"></i><span class="sr-only">Instagram</span></a></li>
+                            <li><a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter pl-2"
+                                        aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
+                            <li><a href="https://www.pinterest.com" target="_blank"><i class="fab fa-pinterest pl-2"
+                                        aria-hidden="true"></i><span class="sr-only">Twitter</span></a></li>
+                        </ul>
+                        <br>
+                        <p class="copyright"><small>&copy; Copyright 2021 The Cook Book </small></p>
+                    </div>
+                </div>
             </div>
-         </footer>
-      </div>
-      <!-- Footer end-->
+        </footer>
+    </div>
+
+    <!-- Footer end-->
 
 
 </body>
+
 </html>
