@@ -25,6 +25,7 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
     recipe_details = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -129,10 +130,12 @@ def add_recipe():
             "created_by": session["user"]
 
         }
-        mongo.db.recipes.insert_one(recipe)
+        recipe = mongo.db.recipes.insert_one(recipe)
+        recipe_id = recipe.inserted_id
         flash("Recipe Successfully Added")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("show_recipe", recipe_id = recipe_id))
 
+   
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
 
@@ -154,7 +157,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("show_recipe", recipe_id = recipe_id))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     recipe["recipe_ingredients"] = ",".join(recipe["recipe_ingredients"])
