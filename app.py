@@ -39,7 +39,7 @@ def show_recipe(recipe_id):
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    recipes= list(mongo.db.tasks.find({"$text": {"$search": query}}))
+    recipes= list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
 
@@ -105,7 +105,7 @@ def profile():
     recipes = mongo.db.recipes.find({"created_by": session["user"]}).sort("_id", 1)
     return render_template("profile.html", username=session["user"], recipes=recipes)
     
-   
+
 
 @app.route("/logout")
 def logout():
