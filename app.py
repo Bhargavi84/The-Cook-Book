@@ -125,6 +125,7 @@ def add_recipe():
             "recipe_ingredients": request.form.get("recipe_ingredients").splitlines(),
             "recipe_instructions": request.form.get("recipe_instructions").splitlines(),
             "recipe_img" : request.form.get("recipe_img"),
+            "prep_time" : request.form.get("prep_time"),
             "cook_time": request.form.get("cook_time"),
             "serves": request.form.get("serves"),
             "created_by": session["user"]
@@ -171,7 +172,7 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted") 
-    return redirect(url_for("get_recipes"))
+    return redirect(url_for("profile", username=session["user"]))
 
 
 @app.route("/get_categories")
