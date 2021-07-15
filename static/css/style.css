@@ -39,8 +39,9 @@ main {
 
 /*--------Flash Messages------*/
 
-.flashes h4{
+.flash-message h4{
     line-height: 2;
+	background-color: #F62A00;
 }
 
 /*--------Recipe Card------*/
