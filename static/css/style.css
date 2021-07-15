@@ -3,7 +3,7 @@
 /*--------Body------*/
 
 body{
-	background-color:#ffe8bd;
+	background-color:#C6D166;
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
@@ -19,6 +19,11 @@ main {
 .nav-wrapper .brand-logo {
 	font-size: 1.8rem;
 	margin-left: 10px;
+	
+}
+
+.nav-wrapper{
+	background-color:#5C821A;
 }
 
 .nav ul a{
@@ -91,6 +96,8 @@ main {
 	bottom: 0;
 	padding: 0;
 	position:static;
+	background-color:#5C821A;
+	
 	
 }
 

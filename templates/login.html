@@ -2,17 +2,17 @@
 {% block content %}
 
 
-<h3 class="center-align">Login</h3>
+<h3 class="center-align light-blue-text text-darken-4"><strong>Login</strong></h3>
 
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-        <div class="card-panel">
+        <div class="card-panel lime lighten-5">
 
             <!--Username-->
 
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-cog prefix black-text text-darken-4 "></i>
+                    <i class="fas fa-user-cog prefix light-blue-text text-darken-4"></i>
                     <input id="username" name="username" type="text" minlength="5" maxlength="15"
                         pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                     <label for="username">Username</label>
@@ -23,7 +23,7 @@
 
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-lock prefix black-text text-darken-4 "></i>
+                    <i class="fas fa-user-lock prefix light-blue-text text-darken-4"></i>
                     <input id="password" name="password" type="password" minlength="5" maxlength="15"
                         pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                     <label for="password">Password</label>
@@ -33,7 +33,7 @@
             <!--Login-->
 
             <div class="row">
-                <button type="submit" class="col s12 btn-large orange darken-3 text-shadow">
+                <button type="submit" class="col s12 btn-large light-green darken-3 text-shadow">
                     Login <i class="fas fa-sign-in-alt"></i>
                 </button>
             </div>
