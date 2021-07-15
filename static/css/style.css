@@ -31,6 +31,9 @@ main {
 	font-size: 1.3rem;
 
 }
+.nav-wrapper li a:hover{
+	background-color: #F62A00;
+}
 
 
 
@@ -55,13 +58,13 @@ main {
 
 }
 
-.btn-small{
+.btn-small {
 	margin:8px;
 	background-color: #1E656D;
 	
 }
 
-.btn-large{
+.btn-large {
 	background-color: #1E656D;
 }
 
@@ -69,13 +72,7 @@ main {
 	background-color: #1E656D;
 }
 
-.btn-small :hover{
-	background-color: #F62A00;
-}
 
-.btn-large:hover{
-	background-color: #F62A00;
-}
 
 /*--------Recipe Card Image-----*/
 
