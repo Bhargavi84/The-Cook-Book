@@ -234,5 +234,14 @@ ul.social li a i {
 
 @media(max-width: 414px) {
 
+	.cyan.darken-4{
+		margin-top: 1rem;
+		font-size: 8px;
+		
+	}
 
+	.red.darken-1{
+
+		font-size: 8px;
+	}
 }
