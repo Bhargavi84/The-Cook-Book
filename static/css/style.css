@@ -230,6 +230,17 @@ ul.social li a i {
 	ul.social li a i {
 		padding: 0 0 0 1rem;
 	}
+
+	.cyan.darken-4{
+		margin-top: 1rem;
+		font-size: 8px;
+		
+	}
+
+	.red.darken-1{
+
+		font-size: 8px;
+	}
 }
 
 @media(max-width: 414px) {
