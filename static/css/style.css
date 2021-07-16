@@ -158,18 +158,6 @@ ul.social li a i {
 /*----------@Media Queries ---------*/
 
 @media(max-width: 375px) {
-
-	.red.darken-1{
-		margin-bottom: 0.2rem;
-		font-size: 10px;
-	}
-	
-	.cyan.darken-4{
-		margin-left: 1rem;
-		font-size: 10px;
-		
-	}
-
 	.nav-wrapper .brand-logo {
 
 		margin-left: 0.2rem;
@@ -183,9 +171,6 @@ ul.social li a i {
 
 @media(max-width: 320px) {
 
-	.red.darken-1{
-		font-size: 10px;
-	}
 	.input-field.col.s12 label{
 
 		font-size: 10px;
@@ -246,13 +231,66 @@ ul.social li a i {
 @media(max-width: 414px) {
 
 	.cyan.darken-4{
-		margin-top: 1rem;
+		margin-top: 0.5rem;
 		font-size: 8px;
+	}
+	.red.darken-1{
+
+		font-size: 8px;
+		margin-bottom: 0.5rem;
+	}
+}
+
+@media(max-width: 768px) {
+
+	.cyan.darken-4{
+		margin-top: 0.1rem;
+		font-size: 10px;
 		
 	}
 
 	.red.darken-1{
 
-		font-size: 8px;
+		font-size: 10px;
 	}
+}
+
+@media(max-width: 640px) {
+
+	.cyan.darken-4{
+		font-size: 6px;
+	}
+
+	.red.darken-1{
+
+		font-size: 6px;
+	}
+
+}
+
+@media(max-width: 640px) {
+
+	.cyan.darken-4{
+		font-size: 6px;
+	}
+
+	.red.darken-1{
+
+		font-size: 6px;
+	}
+
+}
+
+@media(max-width: 280px) {
+
+	.cyan.darken-4{
+		font-size: 2px;
+	}
+
+	.red.darken-1{
+
+		font-size: 10px;
+		
+	}
+
 }
