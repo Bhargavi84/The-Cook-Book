@@ -10,14 +10,16 @@
         <div class="row valign-wrapper center-align">
             <div class="input-field col s12 m8">
                 <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                <label for="query">Search Recipes</label>
+                <label for="query"><i class="fas fa-search left hide-on-small-only"></i>Search Recipes</label>
             </div>
            
-            <div class="col s12 m4">
+            <div class="col s12 m8">
+                <div>
                 <a href="{{ url_for('get_recipes') }}" class="btn red darken-1">Reset</a>
                 <button type="submit" class="btn cyan darken-4 text-shadow">
-                    <i class="fas fa-search left hide-on-small-only"></i> Search
+                    <i class="fas fa-search left hide-on-small-only"></i>Search
                 </button>
+            </div>
             </div>
         
         </div>

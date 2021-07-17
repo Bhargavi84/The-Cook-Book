@@ -282,4 +282,10 @@ ul.social li a i {
 		
 	}
 
+	.nav-wrapper .brand-logo {
+
+		font-size: 1rem;
+		margin-left: 0rem;
+	}
+
 }
