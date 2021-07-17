@@ -8,9 +8,26 @@ Users can also look into other user's recipes.
 Users will be allowed to add recipes, edit recipes and delete recipes of which they have created.
 This website will be helpful for the people who love to cook and share the secrets of tasty recipes to friends and family members.
 ____
-# **Contents**
-* UX
 
+:point_right:
+[Live Demo](https://flask-cook-book-ms3.herokuapp.com/)
+# **Contents**
+
+* [UX](#ux)
+* [Strategy](#strategy)
+* [Scope](#scope)
+* [Structure](#structure)
+* [Skeleton](#skeleton)
+* [Surface](#surface)
+* [Technologies](#technologies-used) 
+* [Features](#feautures) 
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Credits](#credits)
+* [Acknowledgements](#acknowledgements)
+
+
+## UX
 ## **Surface**
 ### Color palette
 ___
