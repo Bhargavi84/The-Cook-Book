@@ -39,7 +39,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="recipe_ingredients" name="recipe_ingredients" minlength="5" maxlength="5000"
-                    class="validate" required>
+                class="materialize-textarea" required>
                         {{- recipe.recipe_ingredients -}}
                     </textarea>
                 <label for="recipe_ingredients"><i class="fas fa-list-ol light-blue-text text-darken-4 hide-on-small-only"></i> List of Ingredients (type as list)</label>
@@ -51,7 +51,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="recipe_instructions" name="recipe_instructions" minlength="5" maxlength="5000"
-                    class="validate" required>
+                class="materialize-textarea" required>
                     {{- recipe.recipe_instructions -}}
                 </textarea>
                 <label for="recipe_instructions"><i class="fas fa-chalkboard-teacher light-blue-text text-darken-4 hide-on-small-only"></i> Instructions (type as list like Step 1,Step 2...)</label>

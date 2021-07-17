@@ -92,6 +92,14 @@ main {
 
 }
 
+/*---------------------Show recipe--------------*/
+
+h2 {
+
+	font-size: 2rem;
+}
+
+
 /*---------------------Add recipe--------------*/
 
 .input-field.col.s12 label {
