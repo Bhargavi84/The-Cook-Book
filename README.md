@@ -18,6 +18,7 @@ ____
 * [Scope](#scope)
 * [Structure](#structure)
 * [Skeleton](#skeleton)
+    * [Wireframes](#wireframes)
 * [Surface](#surface)
 * [Technologies](#technologies-used) 
 * [Features](#feautures) 
@@ -28,6 +29,9 @@ ____
 
 
 ## UX
+
+## **Skeleton**
+
 ## **Surface**
 ### Color palette
 ___
@@ -47,7 +51,7 @@ ___
 * #F62A00 **Candy Apple** - used for the Flash Messages, Reset button, Delete buttons and Hover.
 
 
-# **Tecnologies Used**
+# **Technologies Used**
 
 * Python3 - for the backend development.
 * Flask - Python framework was used all project. Flask depends on the Jinja template engine and the Werkzeug WSGI toolkit.
@@ -109,6 +113,11 @@ In the env.py file we need to hide several bits of data. Open env.py file and ty
 
 ![plot](images/env.png)
 
+### **Fork the project**
+
+* To create a personal copy of this repository, click on Fork button on the top right corner of the repository page in GitHub.
+
+### **Database Access**
 
 
 
