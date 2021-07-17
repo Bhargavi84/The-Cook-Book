@@ -71,6 +71,48 @@ ___
 * Lighthouse - used to improve the quality of the webpage.
 
 
+# **Deployment**
+___
+
+
+* This website is developed by using Gitpod workspace  and GitHub repository to commit and push changes. This project uses GitHub for hosting and has been deployed using Heroku. 
+
+* Following steps can be used to access the page :-
+
+
+### **Download**
+* Git hub navigate to https://github.com/Bhargavi84/The-Cook-Book
+* Click the **Code** button.
+* Click the **Download Zip**.
+* Extract 
+
+### **Clone Repository**
+
+* GitHub navigate to https://github.com/Bhargavi84/The-Cook-Book
+* Click the Code button.
+* To clone with HTTPS copy the URL in the box https://github.com/Bhargavi84/The-Cook-Book.git
+* Open your Git Bash.
+* Changed the directory to the location where you want to clone.
+* Type git clone than paste the copied URL git clone https://github.com/Bhargavi84/The-Cook-Book.git
+Press Enter , your local clone will be created.
+
+### **Creating env file**
+
+Install Flask, in the terminal type pip3 install Flask , this will install Flask functionality. Create env.py file for storing sensitive data, type touch env.py in terminal. This file should never be pushed to GitHub, so type touch .gitignore to ignore it. Than open the .gitignore file and ignore your env.py file type:
+
+![plot](images/gitignore.png)
+
+
+save and close it.
+
+In the env.py file we need to hide several bits of data. Open env.py file and type:
+
+![plot](images/env.png)
+
+
+
+
+
 # **Credits**
 ### Contents
 _____
