@@ -52,12 +52,14 @@ main {
 }
 
 
-.recipe-card .card-image img {
+.card .card-image img {
 	width: 100%;
 	height: 265px;
 	object-fit: cover;
 
 }
+
+
 
 .btn-small {
 	margin:8px;
@@ -258,25 +260,12 @@ ul.social li a i {
 @media(max-width: 640px) {
 
 	.cyan.darken-4{
-		font-size: 6px;
+		font-size: 10px;
 	}
 
 	.red.darken-1{
 
-		font-size: 6px;
-	}
-
-}
-
-@media(max-width: 640px) {
-
-	.cyan.darken-4{
-		font-size: 6px;
-	}
-
-	.red.darken-1{
-
-		font-size: 6px;
+		font-size: 10px;
 	}
 
 }
@@ -284,7 +273,7 @@ ul.social li a i {
 @media(max-width: 280px) {
 
 	.cyan.darken-4{
-		font-size: 2px;
+		font-size: 10px;
 	}
 
 	.red.darken-1{
