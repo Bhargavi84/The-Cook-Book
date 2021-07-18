@@ -4,7 +4,8 @@
 <h3 class="light-blue-text text-darken-4 center-align">Edit Recipe</h3>
 
 <div class="row card-panel">
-    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+     <form class="col s12" method="POST" 
+     action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
 
         <!-- Recipe Category-->
 
@@ -88,10 +89,11 @@
                     <label for="serves"><i class="fas fa-user-friends light-blue-text text-darken-4 hide-on-small-only"></i>Serves</label>
                 </div>
             </div>
+        </div>
             <div class="input-field col s12">    
                 <i class="fas fa-user light-blue-text text-darken-4 hide-on-small-only"></i> Created by:        
                     <input id="created_by" id="created_by" type="name" name="created_by" value="{{ recipe.created_by }}" readonly>        
-                </div>
+            </div>
           
             <!--Submit Button-->
 
