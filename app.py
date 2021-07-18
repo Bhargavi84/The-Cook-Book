@@ -26,8 +26,8 @@ def get_recipes():
 
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
-    recipe_details = mongo.db.recipes.find_one_or_404
-    ({"_id": ObjectId(recipe_id)})
+    recipe_details = mongo.db.recipes.find_one_or_404(
+        {"_id": ObjectId(recipe_id)})
     
     if 'user' not in session:
         return redirect(url_for('login'))
