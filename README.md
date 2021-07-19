@@ -31,6 +31,10 @@ ____
 ## UX
 
 ## **Skeleton**
+### Wireframes
+   *  [Non Registered and Registered User's Wireframe](images/wireframes/non-registered-and-registered-user's-wireframe.png)
+
+   * [Admin's Wireframe](images/wireframes/admin-wireframe.png)
 
 ## **Surface**
 ### Color palette
@@ -67,10 +71,8 @@ ___
 * [Gitpod](https://www.gitpod.io/) - used to built all project.
 * [GitHub](https://github.com/) - used to hosting the website.
 * [Heroku](https://id.heroku.com/) - used to deploy the website.
-* [W3C Markup Validation Service](https://validator.w3.org/) - used to validate HTML code.
-* [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - used to validate css code.
-* [JSHint](https://jshint.com/) - used to validate the jQuery code.
-* [PEP8 online](http://pep8online.com/) - used to validate the Python code.
+
+
 
 
 # **Testing**
@@ -82,14 +84,18 @@ ___
     * HTML Markup Validation [Pass](https://validator.w3.org/)
     * CSS Validation [Pass](https://jigsaw.w3.org/css-validator/)
     * JSHint [Pass](https://jshint.com/)
-    * PEP8 [Pass](http://pep8online.com/)
+    * PEP8 online [Pass](http://pep8online.com/)
 
 * ### **Testing user stories**
 * ### **Functionality testing**
-* ### **Defensive design testing**
+    * ### Manual Testing
+    * ### Defensive design testing
 * ### **Responsiveness**
     The responsiveness of the website was tested physically on Laptops, Desktops, Big screen, Mobile, Tablets and also using Am I Responsive tool as well as Google Dev Tools Device Mode.
-    All tests have shown that site is fully responsive and fits and adapts well to the different viewport size devices.
+    The website fits and adapts well to the different viewport size devices.
+    ![plot](images/responsive.png)
+* ### **Usability Testing**
+    * This website have been shared to family and friends to add, read, edit and delete recipes none of then experienced any issues during the testing process and it was confirmed that the website was easy to use and navigate. They were able to effectively use the interactive elements of the website, find the information they were looking for and easily understand the purpose of the website. 
 * ### **Performance testing**
     Performance testing was carried out using Lighthouse in Chrome Developer Tools.
     * Desktop Performance was excellent in accessibility.
@@ -102,9 +108,6 @@ ___
 
 
 # **Deployment**
-___
-
-
 * This website is developed by using Gitpod workspace  and GitHub repository to commit and push changes. This project uses GitHub for hosting and has been deployed using Heroku. 
 
 * Following steps can be used to access the page :-
@@ -144,7 +147,28 @@ In the env.py file we need to hide several bits of data. Open env.py file and ty
 * To create a personal copy of this repository, click on Fork button on the top right corner of the repository page in GitHub.
 
 ### **Database Access**
+To create the data schema in MongoDB Atlas, create a new database called cook_book, add three collections called 
+categories, recipes and users.
 
+###  cook_book 
+* categories
+    * _id:ObjectId
+    * category_name
+* recipes
+    * _id:ObjectId
+    * category_name
+    * recipe_name
+    * recipe_ingredients should be set into an array
+    * recipe_instruction should be set into an array
+    * recipe_img
+    * prep_time
+    * cook_time
+    * serves
+    * created_by
+* users
+    * _id:ObjectId
+    * username
+    * password
 
 
 
