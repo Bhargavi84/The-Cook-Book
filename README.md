@@ -71,7 +71,32 @@ ___
 * [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - used to validate css code.
 * [JSHint](https://jshint.com/) - used to validate the jQuery code.
 * [PEP8 online](http://pep8online.com/) - used to validate the Python code.
-* **Lighthouse** - used to improve the quality of the webpage.
+
+
+# **Testing**
+___
+
+ * ### **Code Validity**
+    Code validity was performed by the following tools and passed except warnings due to HTML validator was unable to recognize Jinja templates.
+
+    * HTML Markup Validation [Pass](https://validator.w3.org/)
+    * CSS Validation [Pass](https://jigsaw.w3.org/css-validator/)
+    * JSHint [Pass](https://jshint.com/)
+    * PEP8 [Pass](http://pep8online.com/)
+
+* ### **Testing user stories**
+* ### **Functionality testing**
+* ### **Defensive design testing**
+* ### **Responsiveness**
+* ### **Performance testing**
+    Performance testing was carried out using Lighthouse in Chrome Developer Tools.
+    * Desktop Performance was excellent in accessibility.
+    ![plot](images/desktop-performance.png)
+    * Mobile - Performance was in average accessibility
+    ![plot](images/mobile-performance.png)
+    
+
+
 
 
 # **Deployment**
