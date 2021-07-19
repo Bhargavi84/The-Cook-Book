@@ -238,11 +238,12 @@ ul.social li a i {
 	}
 }
 
-@media(max-width: 414px) {
+@media(max-width: 411px) {
 
 	.cyan.darken-4{
-		margin-top: 0.5rem;
+		margin-top: 0.1rem;
 		font-size: 8px;
+
 	}
 	.red.darken-1{
 
