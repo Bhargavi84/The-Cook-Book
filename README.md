@@ -53,26 +53,25 @@ ___
 
 # **Technologies Used**
 
-* Python3 - for the backend development.
-* Flask - Python framework was used all project. Flask depends on the Jinja template engine and the Werkzeug WSGI toolkit.
-* PyMongo - is a Python distribution containing tools, used for working with MongoDB.
-* Werkzeug - used for password security.
-* Jinja - used in conjuction with python for the working of the website
-* MongoDB - database was used to storing and retrieving information in the website.
-* HTML - used for creating the website.
-* CSS - used for styling the website.
-* jQuery - used for confirmation messages and interactive design, also initialise MaterializeCSS components.
-* MaterializeCSS - used to create responsive design, grid system, buttons, navbar, sidenav, dropdown, footer, modal, cards, forms.
-* balsamiq - used to create wireframes.
-* Gitpod - used to built all project.
-* GitHub - used to hosting the website.
-* Heroku - used to deploy the website.
-* Chrome DevTools - used all the time when created the website.
-* W3C Markup Validation Service - used to validate HTML code.
-* CSS Validation Service - used to validate css code.
-* JSHint - used to validate the jQuery code.
-* PEP8 online - used to validate the Python code.
-* Lighthouse - used to improve the quality of the webpage.
+* [Python3](https://www.python.org/)
+    * [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/layout/) - Python framework was used all project. Flask depends on the Jinja template engine and the Werkzeug WSGI toolkit.
+    * [PyMongo](https://pymongo.readthedocs.io/en/stable/) - is a Python distribution containing tools, used for working with MongoDB.
+    * [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/utils/#module-werkzeug.security) - used for password security.
+    * Jinja - used in conjuction with python for the working of the website
+* [MongoDB](https://www.mongodb.com/) - database was used to storing and retrieving information in the website.
+* **HTML** - used for creating the website.
+* **CSS** - used for styling the website.
+* [jQuery](https://jquery.com/) - used for confirmation messages and interactive design, also initialise MaterializeCSS components.
+* [MaterializeCSS](https://materializecss.com/)- used to create responsive design, grid system, buttons, navbar, sidenav, dropdown, footer, modal, cards, forms.
+* [balsamiq](https://balsamiq.com/wireframes/) - used to create wireframes.
+* [Gitpod](https://www.gitpod.io/) - used to built all project.
+* [GitHub](https://github.com/) - used to hosting the website.
+* [Heroku](https://id.heroku.com/) - used to deploy the website.
+* [W3C Markup Validation Service](https://validator.w3.org/) - used to validate HTML code.
+* [CSS Validation Service](https://jigsaw.w3.org/css-validator/) - used to validate css code.
+* [JSHint](https://jshint.com/) - used to validate the jQuery code.
+* [PEP8 online](http://pep8online.com/) - used to validate the Python code.
+* **Lighthouse** - used to improve the quality of the webpage.
 
 
 # **Deployment**
@@ -113,7 +112,7 @@ In the env.py file we need to hide several bits of data. Open env.py file and ty
 
 ![plot](images/env.png)
 
-### **Fork the project**
+## **Fork the project**
 
 * To create a personal copy of this repository, click on Fork button on the top right corner of the repository page in GitHub.
 
@@ -133,7 +132,9 @@ ____
 
 
 * Inspiration by Task Manager Mini Project from Code Institute.
-* 
+* The below script was borrowed from code institute mini project.
+
+![plot](images/tim-code.png)
 
 
 ### Design
@@ -161,7 +162,7 @@ ___
 
 ___
 
-* The Image address was borrowed from the Google Images and has been pasted in the URL field by most of the users for Testing purposes.
+* https://imgur.com/upload - imgur platform has been used for uploading the images and copying the link and pasting in the url column in this project.
 
 ## Acknowledgements
 ___
