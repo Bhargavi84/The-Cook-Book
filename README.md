@@ -89,8 +89,7 @@ ___
 * ### **Defensive design testing**
 * ### **Responsiveness**
     The responsiveness of the website was tested physically on Laptops, Desktops, Big screen, Mobile, Tablets and also using Am I Responsive tool as well as Google Dev Tools Device Mode.
-
-It was tested on physical devices including iPhone XR and iPad. All tests have shown that site is fully responsive and fits and adapts well to the different viewport size devices.
+    All tests have shown that site is fully responsive and fits and adapts well to the different viewport size devices.
 * ### **Performance testing**
     Performance testing was carried out using Lighthouse in Chrome Developer Tools.
     * Desktop Performance was excellent in accessibility.
