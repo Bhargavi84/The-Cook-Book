@@ -57,7 +57,7 @@ ___
     * [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/layout/) - Python framework was used all project. Flask depends on the Jinja template engine and the Werkzeug WSGI toolkit.
     * [PyMongo](https://pymongo.readthedocs.io/en/stable/) - is a Python distribution containing tools, used for working with MongoDB.
     * [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/utils/#module-werkzeug.security) - used for password security.
-    * Jinja - used in conjuction with python for the working of the website
+    * [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - used in conjuction with python for the working of the website
 * [MongoDB](https://www.mongodb.com/) - database was used to storing and retrieving information in the website.
 * **HTML** - used for creating the website.
 * **CSS** - used for styling the website.
