@@ -178,6 +178,43 @@ ___
 * Type git clone than paste the copied URL git clone https://github.com/Bhargavi84/The-Cook-Book.git
 Press Enter , your local clone will be created.
 
+### **Deployment to Heroku**
+* **Set up workspace for Heroku**:
+
+    * In the terminal window of IDE, create a requirements.txt file to contain all applications and dependencies required to run the app.
+    *        pip3 freeze --local . requirements.txt
+
+    * Create a Procfile (strictly capital P and no file extension!) - required by Heroku, to know which file runs the app.
+
+    *       echo web: python app.py > Procfile
+    
+* **Create application in Heroku**:
+
+    * Navigate to [Heroku website](https://dashboard.heroku.com/) and create an account.
+    * Once logged in, click on the New button and select Create New App
+    * Create a name for your app and select the region closest to your location.
+
+* **Connect your app to GitHub repository**:
+
+    * On the Deploy page, select GitHub as your Deployment method.
+    * You will then be prompted to find the github repository, click on Connect button to connect.
+    * Click on the Settings  and select Config Vars and Reveal Config Vars.
+    * Add the following variables (as stored in env file):
+
+    ![plot](static/images/env.png)
+In the IDE terminal, push the two new files to the GitHub repository:
+
+        git add requirements.txt
+        git commit -m "Add requirements.txt"  
+        git add Procfile
+        git commit -m "Add Procfile"
+        git push
+* Now go back to Heroku and click on Enable Automatic Deployment and Deploy Branch.
+
+* The app is now connected and Heroku will receive the code from GitHub and automatically update whenever changes is pushed to the GitHub repository. You should be able to see "Your app was successfully deployed!". Click on View to launch your app.
+
+
+
 ### **Creating env file**
 
 Install Flask, in the terminal type pip3 install Flask , this will install Flask functionality. Create env.py file for storing sensitive data, type touch env.py in terminal. This file should never be pushed to GitHub, so type touch .gitignore to ignore it. Than open the .gitignore file and ignore your env.py file type:
