@@ -31,6 +31,11 @@ ____
 
 ## UX
 
+
+## **Scope**
+* To create a website that will help the users get motivated to share their authentic and traditional recipes.
+The website has been divided into different section so that users can easily look into that and the infomation are easy and understandable way so that  they can add, read, edit and delete their choices easily.
+
 ## **Structure**
 * This  website is a food recipes storage website that contains three sections.
     * ### Non Registered users
