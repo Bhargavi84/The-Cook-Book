@@ -40,6 +40,7 @@ ____
 * To make easy steps to see other users recipes which is already added.
 * To know about the different food categories and ingredients.
 * To ensure users are able to edit and delete recipes if they have entered wrongly.
+* To make sure users can easily use search function and search their favourite dish in it. 
 
 
 ## **Scope**
