@@ -111,6 +111,17 @@ ___
 * [Heroku](https://id.heroku.com/) - used to deploy the website.
 
 # **Features**
+  ###  Existing Features
+ ___
+ * ### Navigation bar
+ The nav bar feature is fixed in desktops and if resized turns into a hamburger icon in mobile and tablet screen and coresponding link will display from right side.
+ * ### Home 
+ The Home page feature have the search panel in which, it has two buttons Reset and Search.
+ If user enters a word , it displays the results below the panel it takes data from from recipe name, category_name and Ingredients list. otherwise it displays a message 'No Results Found'
+ Reset button resets the value entered in search button and retrieve the home page.
+
+ * ### Profile
+ The Profile page feature have the display of username on top of the page, also displays  user's recipes and has a show more button and when clicked it will take to show recipe page.
 
 
 # **Testing**
