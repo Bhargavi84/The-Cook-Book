@@ -1,6 +1,6 @@
 # **The-Cook-Book**
 ## Milestone_Project-3_Code-Institute
-![plot](images/responsive.png)
+![plot](static/images/responsive.png)
 ____
 # **About**
 ### 
@@ -67,18 +67,18 @@ Admin page will have **Home, Profile, New recipe, Manage Categories and Logout**
 
 ## **Skeleton**
 ### Wireframes
-   *  [Non Registered and Registered User's Wireframe](images/wireframes/non-registered-and-registered-user's-wireframe.png)
+   *  [Non Registered and Registered User's Wireframe](static/images/wireframes/non-registered-and-registered-user's-wireframe.png)
 
-   * [Admin's Wireframe](images/wireframes/admin-wireframe.png)
+   * [Admin's Wireframe](static/images/wireframes/admin-wireframe.png)
 ### Database-Diagram
 * The diagram below shows the relationship between fields of the existing database collections.
-![plot](images/db-diagram.png)
+![plot](static/images/db-diagram.png)
 
 ## **Surface**
 ### Color palette
 ___
 
-![plot](/images/color-palette.png)
+![plot](static/images/color-palette.png)
 
 ___
 
@@ -142,15 +142,15 @@ ___
 * ### **Responsiveness**
     The responsiveness of the website was tested physically on Laptops, Desktops, Big screen, Mobile, Tablets and also using Am I Responsive tool as well as Google Dev Tools Device Mode.
     The website fits and adapts well to the different viewport size devices.
-    ![plot](images/responsive.png)
+    ![plot](static/images/responsive.png)
 * ### **Usability Testing**
     * This website have been shared to family and friends to add, read, edit and delete recipes none of then experienced any issues during the testing process and it was confirmed that the website was easy to use and navigate. They were able to effectively use the interactive elements of the website, find the information they were looking for and easily understand the purpose of the website. 
 * ### **Performance testing**
     Performance testing was carried out using Lighthouse in Chrome Developer Tools.
     * Desktop Performance was excellent in accessibility.
-    ![plot](images/desktop-performance.png)
+    ![plot](static/images/desktop-performance.png)
     * Mobile - Performance was in average accessibility
-    ![plot](images/mobile-performance.png)
+    ![plot](static/images/mobile-performance.png)
 
 
 
@@ -182,14 +182,14 @@ Press Enter , your local clone will be created.
 
 Install Flask, in the terminal type pip3 install Flask , this will install Flask functionality. Create env.py file for storing sensitive data, type touch env.py in terminal. This file should never be pushed to GitHub, so type touch .gitignore to ignore it. Than open the .gitignore file and ignore your env.py file type:
 
-![plot](images/gitignore.png)
+![plot](static/images/gitignore.png)
 
 
 
 
 In the env.py file we need to hide several bits of data. Open env.py file and type:
 
-![plot](images/env.png)
+![plot](static/images/env.png)
 
 ## **Fork the project**
 
@@ -234,7 +234,7 @@ ____
 * Inspiration by Task Manager Mini Project from Code Institute.
 * The below script was borrowed from code institute mini project.
 
-![plot](images/tim-code.png)
+![plot](static/images/tim-code.png)
 
 
 ### Design
