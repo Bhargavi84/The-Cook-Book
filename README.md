@@ -35,6 +35,9 @@ ____
    *  [Non Registered and Registered User's Wireframe](images/wireframes/non-registered-and-registered-user's-wireframe.png)
 
    * [Admin's Wireframe](images/wireframes/admin-wireframe.png)
+### Database Diagram
+* The diagram below shows the relationship between fields of the existing database collections.
+![plot](images/db-diagram.png)
 
 ## **Surface**
 ### Color palette
@@ -136,7 +139,7 @@ Install Flask, in the terminal type pip3 install Flask , this will install Flask
 ![plot](images/gitignore.png)
 
 
-save and close it.
+
 
 In the env.py file we need to hide several bits of data. Open env.py file and type:
 
