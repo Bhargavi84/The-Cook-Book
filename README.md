@@ -1,5 +1,6 @@
 # **The-Cook-Book**
 ## Milestone_Project-3_Code-Institute
+![plot](images/responsive.png)
 ____
 # **About**
 ### 
@@ -30,7 +31,7 @@ ____
 
 
 ## UX
-
+### **User Stories:**
 
 
 ## **Strategy**
@@ -109,7 +110,7 @@ ___
 * [GitHub](https://github.com/) - used to hosting the website.
 * [Heroku](https://id.heroku.com/) - used to deploy the website.
 
-
+# **Features**
 
 
 # **Testing**
