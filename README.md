@@ -32,6 +32,16 @@ ____
 ## UX
 
 
+
+## **Strategy**
+**Objectives:**
+* To provide a quick and fast feeling while accessing the website to all first time users.
+* To create an easy way for storing the recipes and sharing to friends and family members.
+* To make easy steps to see other users recipes which is already added.
+* To know about the different food categories and ingredients.
+* To ensure users are able to edit and delete recipes if they have entered wrongly.
+
+
 ## **Scope**
 * To create a website that will help the users get motivated to share their authentic and traditional recipes.
 The website has been divided into different section so that users can easily look into that and the infomation are easy and understandable way so that  they can add, read, edit and delete their choices easily.
