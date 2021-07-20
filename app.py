@@ -1,6 +1,6 @@
 import os
-from flask import ( 
-    Flask, flash, render_template, 
+from flask import (
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
@@ -17,7 +17,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/")                                                                
+@app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -28,7 +28,7 @@ def get_recipes():
 def show_recipe(recipe_id):
     recipe_details = mongo.db.recipes.find_one_or_404(
         {"_id": ObjectId(recipe_id)})
-    
+
     if 'user' not in session:
         return redirect(url_for('login'))
 
@@ -49,7 +49,7 @@ def register():
         # check if the username already exists
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        
+
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
@@ -73,7 +73,7 @@ def login():
             {"username": request.form.get("username").lower()})
         if existing_user:
             # ensure hashed password matches user input
-            if check_password_hash(existing_user["password"], 
+            if check_password_hash(existing_user["password"],
                                    request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
@@ -97,7 +97,7 @@ def profile():
         {"created_by": session["user"]}).sort("_id", 1)
     return render_template(
         "profile.html", username=session["user"], recipes=recipes)
-    
+
 
 @app.route("/logout")
 def logout():
@@ -152,8 +152,8 @@ def edit_recipe(recipe_id):
         return redirect(url_for("show_recipe", recipe_id=recipe_id))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    recipe["recipe_ingredients"] = ",".join(recipe["recipe_ingredients"])
-    recipe["recipe_instructions"] = ",".join(recipe["recipe_instructions"])
+    recipe["recipe_ingredients"] = "\n".join(recipe["recipe_ingredients"])
+    recipe["recipe_instructions"] = "\n".join(recipe["recipe_instructions"])
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template(
         "edit_recipe.html", recipe=recipe, categories=categories)
@@ -162,7 +162,7 @@ def edit_recipe(recipe_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("Recipe Successfully Deleted") 
+    flash("Recipe Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))
 
 
@@ -180,7 +180,7 @@ def add_category():
         }
         mongo.db.categories.insert_one(category)
         flash("New Category Added")
-        return redirect(url_for("get_categories"))   
+        return redirect(url_for("get_categories"))
 
     return render_template("add_category.html")
 
@@ -193,7 +193,7 @@ def edit_category(category_id):
         }
         mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
         flash("Category Successfully Updated")
-        return redirect(url_for("get_categories"))   
+        return redirect(url_for("get_categories"))
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
 
@@ -201,10 +201,10 @@ def edit_category(category_id):
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
-    flash("Category Successfully Deleted") 
+    flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
 
 
 if __name__ == "__main__":
-    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), 
+    app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")),
             debug=True)
