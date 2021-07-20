@@ -19,6 +19,7 @@ ____
 * [Structure](#structure)
 * [Skeleton](#skeleton)
     * [Wireframes](#wireframes)
+    * [Database Diagram](#database-diagram)
 * [Surface](#surface)
 * [Technologies](#technologies-used) 
 * [Features](#feautures) 
@@ -30,12 +31,29 @@ ____
 
 ## UX
 
+## **Structure**
+* This  website is a food recipes storage website that contains three sections.
+    * ### Non Registered users
+    * ### Registered user
+    * ### Admin
+
+* Non Registered users or first time visitors:- can enter the webpage and see all 
+recipes in Home page in order to see more they are supposed to register.
+They can see only 3 option in Nav bar **Home , Login and Register** on top in desktop and in sidenav bar / hamburger menu in mobile phones and tabs.
+
+* Registered user:- Once registered, users can click on login and enter the webpage. They can see **Home, Profile, New recipe, Logout**.Users can also look into their profile page and look other user's recipe by clicking on show more button in card in home page. 
+
+* Admin :- Admin will have access to manage and delete categories and add and delete recipes (of other user's)
+The idea behind this is any unknown users cannot upload any kind of irrelavant images or contents. 
+Admin page will have **Home, Profile, New recipe, Manage Categories and Logout** options on Navbar.
+
+
 ## **Skeleton**
 ### Wireframes
    *  [Non Registered and Registered User's Wireframe](images/wireframes/non-registered-and-registered-user's-wireframe.png)
 
    * [Admin's Wireframe](images/wireframes/admin-wireframe.png)
-### Database Diagram
+### Database-Diagram
 * The diagram below shows the relationship between fields of the existing database collections.
 ![plot](images/db-diagram.png)
 
