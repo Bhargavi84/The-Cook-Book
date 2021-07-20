@@ -3,6 +3,8 @@
       $('.sidenav').sidenav({edge:"right"});
       $('select').formSelect();
       $('.modal').modal();
+      
+     /*-- Code borrowed from code institute Task Manager walk through project --*/ 
     
       validateMaterializeSelect();
       function validateMaterializeSelect() {
