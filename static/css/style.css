@@ -174,12 +174,15 @@ ul.social li a i {
 	.nav-wrapper .brand-logo {
 
 		margin-left: 0.2rem;
+		font-size: 18px;
 
 	}
 	.flash-message h4{
 		font-size: 15px;
 	}
-
+	h3 {
+		font-size: 18px;
+	}
 }
 
 @media(max-width: 320px) {
@@ -195,9 +198,7 @@ ul.social li a i {
 		margin-left: 0.2rem;
 	}
 
-	h3 {
-		font-size: 2.0rem;
-	}
+	
 
 	.flash-message h4{
 		font-size: 15px;
@@ -222,7 +223,7 @@ ul.social li a i {
 	}
 
 	h3 {
-		font-size: 2.0rem;
+		font-size: 18px;
 	}
 
 	ul.social li a i {
