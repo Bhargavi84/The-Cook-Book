@@ -123,6 +123,44 @@ ___
  * ### Profile
  The Profile page feature have the display of username on top of the page, also displays  user's recipes and has a show more button and when clicked it will take to show recipe page.
 
+* ### New Recipe
+The New recipe page feature, will take the new input in the form,  user can insert by choosing the category name and insert the recipe according to that.All entered data will be stored in MongoDB and redirected to the website's other pages. The form has a placeholder with an icon that will move up when the user clicks into the field. If the user leaves the input field empty and clicks Submit button, will display an error message(manadatory fields). The input line will also change the color to red.
+
+* Choose your category :- field has a list of categories that the user can pick up for their recipe.
+* Recipe Name :-field a user can input 5-30 characters long.
+* Ingredients :- field a user can input 5- 5000 characters long and can be separated on a new line for final display all text into an array.
+* Instructions:- field a user can input 5- 5000 characters long text and can be separated on a new line for final display all text into an array.
+* IMG URL :- field the user has to paste image address and has to be 5-300 characters long.
+* Preparation:- Time field a user can input numbers from 0-500.
+* Cooking Time:- field a user can input numbers from 0-120.
+* Serving:- field a user can input numbers from 1-100.
+* Add recipe:- button has a color change when the user is hovers on the button, and when clicked will display flash message "Recipe successfully Added" routed to the profile page
+
+* ### Edit Recipe
+The Edit recipe has features to edit recipe form same as Edit recipe. Only recipe owners and website admin can edit recipes. There is a CANCEL button that will bring you back to a profile page, and the button save recipe will update the recipe and when clicked will display flash message "Recipe successfully updated" routed to the profile page. All edited data will be stored in MongoDB and redirected to others pages. The form has a placeholder with an icon that will move up when the user clicks into the field. If the user leaves the input field empty and clicked submit button will display an error message, also the input line change colors.
+
+* Choose your category :- field has a list of categories that the user can pick up for their recipe.
+* Recipe Name :-in this field a user can input 5-30 characters long.
+* Ingredients :- in this field a user can input 5- 5000 characters long and can be separated on a new line for final display all text into an array.
+* Instructions:- in this field a user can input 5- 5000 characters long text and can be separated on a new line for final display all text into an array.
+* IMG URL :- in this field the user has to paste image address and has to be 5-300 characters long.
+* Preparation Time :- in this field a user can input numbers from 0-500.
+* Cooking Time:- in this field a user can input numbers from 0-120.
+* Serving:- field a user can input numbers from 1-100.
+* Save Recipe button has color change when the user hovers on the button, redirected user to show recipe page with new changes that user has made.
+* CANCEL button redirected back to the show recipe page.
+
+* ### Delete Recipe
+The delete button is next to edit button in show recipe page.
+when user clicks on this button the message is popped out for confirmation of deletion of the recipe and the pop up window has two options Ok and Cancel when user clicks Ok the recipe will be deleted and flash message is "Recipe successfully deleted" when user clicks cancel it routes back to show recipe page.Only recipe owners and website admin can delete recipes.
+
+
+* ### Login page
+The Login page feature will help the user to login to the website and if the user enters wrong username / password the flash message will pop out to alert to user to enter the correct credentials.
+
+* ### Register page
+The register page  feature will help first time user to register to the page and create a login.
+
 
 # **Testing**
 ___
