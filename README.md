@@ -156,10 +156,29 @@ when user clicks on this button the message is popped out for confirmation of de
 
 
 * ### Login page
-The Login page feature will help the user to login to the website and if the user enters wrong username / password the flash message will pop out to alert to user to enter the correct credentials.
+The Login page feature will help the user to login to the website and if the user enters wrong username / password the flash message will pop out to alert to user to enter the correct credentials. The username field has to be a 5-15 character long string, Error message is displayed to enter manadatory fields(if nothing is entered). Clicking the login button the user will be routed to the user's profile page.There is a link to the Register page, below the login form. Clicking that link the user will be routed to the Register page.
 
 * ### Register page
-The register page  feature will help first time user to register to the page and create a login.
+The register page  feature will help first time user to register to the page and create a login. username field is a string which has to be 5-15 characters long, including lower and upper case and any number(alphanemeric)
+Error message is displayed to enter manadatory fields(if nothing is entered).
+if the user enters wrong username / password the flash message will pop out to alert to user to enter the correct credentials. Clicking the register button the user will be routed to the user's profile page and flash message diplays "Registration successfull"
+
+* ### Manage Categories
+Manage Categories page feature is only accessible to admin. If clicked on manage categories it will route to get categories page and displays all categories that admin has created. In the category card, there is a category name and two buttons Edit and Delete (for exiesting categories) and there is Add Category button when clicked which will route the admin to add category page. 
+
+* Clicking on the Edit button the admin will be routed to the Edit category page.
+* Clicking on the Delete button, the confirmation message will pop up with two buttons: Agree and Close.
+* Clicking on Agree button the Category will be deleted from the page and from the database.
+* Clicking on the Close button the confirmation message will be closed and the admin will stay on the same page.
+
+* ### Add Category
+Add Category page feature is only accessible to admin. In the Add category page, the admin can input 3-25 characters long text, and a single button to submit a new category is ADD CATEGORY. When admin clicks the button, it will be routed to the Manage category page and the new category will be displayed in alphabetical order. Flash message displays "New Category Added" Also, this category will be displayed for users in the add new recipe page, in Choose your category dropdown.
+
+* ### Edit Category
+In the Edit Category page, the admin can edit the text and the final input has to be a 3-25 characters long text. There are two buttons: Cancel and Edit Category.
+
+* Clicking the Cancel button, the admin will be routed back to the Manage Categories page.
+* Clicking Edit button, the newly entered text will be updated and admin will be routed to the manage category page , flash message displays "Category successfully updated" the category card will be displayed in alphabetical order. And also this category will be displayed for users in the add new recipe page, Choose your category list.
 
 
 # **Testing**
