@@ -31,7 +31,49 @@ ____
 
 
 ## UX
-### **User Stories:**
+### **User Stories**
+### Ideal user
+* The ideal user of this website would be food lovers, users who wants to learn cooking, users who can read and write in English. The user who wants to share the authentic and traditional recipe with other people, or simply use it for recipe collection and storing.
+### Visitors to this website are searching for
+
+* The website users searching for the recipe to cook something different and quick recipes. They found the attractive images or with minimum ingredients and also easy instruction steps(how to cook). Or otherwise, they want to share their own recipe.
+
+## **User stories - guest users/non-registered users**
+*   As a guest user to the cook book website, I want to easily navigate through the site, so that I can find the recipe I need that are created by other users of the webiste.
+*   As a guest user to the cook book website, I want register/log-in functions, so that I can have my own profile created.
+*   As a guest user to the cook book website, I want to use the search panel to found recipes by category or by ingredient.
+*   As a guest user to the cook book website, I want to see the links to different social media accounts, to contact or follow the website on social media.
+## **User stories - registered users**
+*   As a registered user to the cook book website, I want to easily navigate through the site, so that I can find the recipe I need that are created by other users of the webiste.
+*   As a registered user to the cook book website, I want to have log-in function, using which in can access my profile.
+*   As a registered user to the cook book website, I want to insert my own recipe and share it with others users from the website.
+*   As a registered user to the cook book website, I want to edit my recipe if I make a mistake for some reason.
+*   As a registered user to the cook book website, I want to delete my recipe, if I think that I don't want to have this recipe listed.
+*   As a registered user to the cook book website, I want to have my profile, that I can easily find all the recipes I have added.
+*   As a registered user to the cook book website, I want to have a home page where I can view the snapshot of other users' recipes that looks good.
+*   As a registered user to the cook book website, I want to have a "show more" button on all the recipe snapshots, that shows the complete details of the recipe I am interested in.
+*   As a registered user to the cook book website, I want to get security features, that if I duplicate a page for some reason and Log Out on one page, that others pages also will be logged out.
+*   As a registered user to the cook book website, I want to get security features, that others PC users can't come in in my profile from the browser history.
+*   As a registered user to the cook book website, I want to use the search panel to find recipes by an ingredient or by a name or part of the name.
+*   As a registered user of the website, I want to see social media links, to contact or follow the website on social media.
+*   As a registered user to the cook book website, I want to get a confirmation message before deleting the recipe.
+
+## **User stories registered as admin**
+*   As an admin of the website, I want to easily monitor and regularly update the website.
+*   As an admin of the website, I want to have Log In functions, that I can have my own profile.
+*   As an admin of the website, I want to add my own recipe and share it with other users from the website.
+*   As an admin of the website, I want to edit my recipe if any discripencies.
+*   As an admin of the website, I want to remove my recipe, if I think that I don't want that others see this recipe.
+*   As an admin of the website, I want to have access to edit/remove user's recipes, if I think that the recipe is can not be public.
+*   As an admin of the website, I want to have the ability to create, edit or remove categories for recipes that will be help users will be easily sorted or found recipes.
+*   As an admin of the website, I want to get a confirmation message before deleting a recipe or category.
+*As an admin of the website, I want to have my own profile, that I can find all my recipes.
+*   As an admin of the website, I want to view others user's recipes, to try if image is appropriate to the recipe added.
+*   As an admin of the website, I want to get security features, that if I duplicate a page for some reason and Log Out on one page, that others pages also will be logged out.
+*   As an admin of the website, I want to use the search panel to find recipes by category name, recipe name and ingredients.
+*   As an admin of the website, I want to see social media links, to contact or follow the website on social media.
+
+
 
 
 ## **Strategy**
