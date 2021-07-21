@@ -259,8 +259,38 @@ ___
 
 * ### **Testing user stories**
 
+    * ### Non Registered users
+        * As a guest user to the cook book website, I want to easily navigate through the site, so that I can find the recipe I need that are created by other users of the webiste.
+            * The Home page features has all recipe cards to look in and nav bar which has login and register option.
+        * As a guest user to the cook book website, I want register/log-in functions, so that I can have my own profile created.
+            * The navigation bar has Register option to help user easily understand and register to the website.
+        * As a guest user to the cook book website, I want to use the search panel to find recipes by category name or recipe name or by ingredient.
+            * The search panel is clearly labelled and easily accessible from the Home Page.
+        * As a guest user to the cook book website, I want to see the links to different social media accounts, to contact or follow the website on social media.
+            * The social link are clearly visible on the footer bar and easily accessible all the time.
     * ### Registered users
-    
+        * As a registered user to the cook book website, I want to easily navigate through the site, so that I can find the recipe I need that are created by other users of the webiste.
+            * The Home page features has all recipe cards to look in and nav bar which has login and register option.
+        * As a registered user to the cook book website, I want to have log-in function, using which in can access my profile.
+            * The navigation bar has Login option to help user easily understand and login to the website.
+        * As a registered user to the cook book website, I want to insert my own recipe and share it with others users from the website.
+            * The navigation bar has New recipe option to help user easily understand add recipe to the website.
+        * As a registered user to the cook book website, I want to edit my recipe if any discripencies.
+            * User can easily access profile page on Nav bar and click on show more button on individual recipe page user can click edit button in which user would like to edit. 
+        * As a registered user to the cook book website, I want to delete my recipe, if I think that I don't want to have this recipe listed.
+            * User can easily access profile page on Nav bar and click on show more button on individual recipe page user can click delete button in which user would like to delete.
+        * As a registered user to the cook book website, I want to have my profile, that I can easily find all the recipes I have added.
+            * Once user creates login user is navigated to uers's profile page which is easily acessible on nav bar.
+        * As a registered user to the cook book website, I want to have a home page where I can view the snapshot of other users' recipes that looks good.
+            * Once the user log into the webpage user can easily access the Home page.
+        * As a registered user to the cook book website, I want to have a "show more" button on all the recipe snapshots, that shows the complete details of the recipe I am interested in.
+            * Once the user log in to the webpage user can see recipe cards in which each card will have "show more" button which is easily accessible.
+        * As a registered user to the cook book website, I want to use the search panel to find recipes by category name, recipe name and ingredient.
+            * The search panel is clearly labelled and easily accessible from the Home Page.
+        * As a registered user of the website, I want to see social media links, to contact or follow the website on social media.
+            The social link are clearly visible on the footer bar and easily accessible all the time.
+        * As a registered user to the cook book website, I want to get a confirmation message before deleting the recipe.
+            * once user is logged in , on nav bar click on profile, on the individual recipe card click on show more and it routes to show recipe page where user can see Edit and Delete buttons, Delete button is easily accessible and clearly labelled.
 
 * ### **Functionality testing**
     * ### Manual Testing
