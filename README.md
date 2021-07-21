@@ -36,7 +36,7 @@ ____
 * The ideal user of this website would be food lovers, users who wants to learn cooking, users who can read and write in English. The user who wants to share the authentic and traditional recipe with other people, or simply use it for recipe collection and storing.
 ### Visitors to this website are searching for
 
-* The website users searching for the recipe to cook something different and quick recipes. They found the attractive images or with minimum ingredients and also easy instruction steps(how to cook). Or otherwise, they want to share their own recipe.
+* The website users searching for the recipe to cook something different and quick recipes. They found the attractive images or with less cook time / prep time. Or otherwise, they want to share their own recipe.
 
 ## **User stories - guest users/non-registered users**
 *   As a guest user to the cook book website, I want to easily navigate through the site, so that I can find the recipe I need that are created by other users of the webiste.
@@ -83,6 +83,7 @@ ____
 * To know about the different food categories and ingredients.
 * To ensure users are able to edit and delete recipes if they have entered wrongly.
 * To make sure users can easily use search function and search their favourite dish in it. 
+* To learn cooking step by step for user who is cooking for the first time. 
 
 
 ## **Scope**
@@ -97,7 +98,7 @@ The website has been divided into different section so that users can easily loo
 
 * Non Registered users or first time visitors:- can enter the webpage and see all 
 recipes in Home page in order to see more they are supposed to register.
-They can see only 3 option in Nav bar **Home , Login and Register** on top in desktop and in sidenav bar / hamburger menu in mobile phones and tabs.
+They can see only three option in Nav bar **Home , Login and Register** on top in desktop and in sidenav bar / hamburger menu in mobile phones and tabs.
 
 * Registered user:- Once registered, users can click on login and enter the webpage. They can see **Home, Profile, New recipe, Logout**.Users can also look into their profile page and look other user's recipe by clicking on show more button in card in home page. 
 
@@ -138,14 +139,14 @@ ___
 
 * [Python3](https://www.python.org/)
     * [Flask](https://flask.palletsprojects.com/en/1.1.x/tutorial/layout/) - Python framework was used all project. Flask depends on the Jinja template engine and the Werkzeug WSGI toolkit.
-    * [PyMongo](https://pymongo.readthedocs.io/en/stable/) - is a Python distribution containing tools, used for working with MongoDB.
+    * [PyMongo](https://pymongo.readthedocs.io/en/stable/) - is a Python tools, used for working with MongoDB.
     * [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/utils/#module-werkzeug.security) - used for password security.
-    * [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - used in conjuction with python for the working of the website
+    * [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - used  with python for  working of the website
 * [MongoDB](https://www.mongodb.com/) - database was used to storing and retrieving information in the website.
 * **HTML** - used for creating the website.
 * **CSS** - used for styling the website.
 * [jQuery](https://jquery.com/) - used for confirmation messages and interactive design, also initialise MaterializeCSS components.
-* [MaterializeCSS](https://materializecss.com/)- used to create responsive design, grid system, buttons, navbar, sidenav, dropdown, footer, modal, cards, forms.
+* [MaterializeCSS](https://materializecss.com/)- used to create responsive design, grid system, buttons, navbar, sidenav, dropdown, modal, cards, forms.
 * [balsamiq](https://balsamiq.com/wireframes/) - used to create wireframes.
 * [Gitpod](https://www.gitpod.io/) - used to built all project.
 * [GitHub](https://github.com/) - used to hosting the website.
@@ -159,14 +160,14 @@ ___
  The nav bar feature is fixed in desktops and if resized turns into a hamburger icon in mobile and tablet screen and coresponding link will display from right side.
  * ### Home 
  The Home page feature have the search panel in which, it has two buttons Reset and Search.
- If user enters a word , it displays the results below the panel it takes data from from recipe name, category_name and Ingredients list. otherwise it displays a message 'No Results Found'
+ If user enters a word , it displays the results below the panel it takes data from recipe name, category_name and Ingredients list. otherwise it displays a message 'No Results Found'
  Reset button resets the value entered in search button and retrieve the home page.
 
  * ### Profile
- The Profile page feature have the display of username on top of the page, also displays  user's recipes and has a show more button and when clicked it will take to show recipe page.
+ The Profile page feature have the display of username on top of the page, also displays  user's recipe cards and has a show more button and when clicked it will take to show recipe page.
 
 * ### New Recipe
-The New recipe page feature, will take the new input in the form,  user can insert by choosing the category name and insert the recipe according to that.All entered data will be stored in MongoDB and redirected to the website's other pages. The form has a placeholder with an icon that will move up when the user clicks into the field. If the user leaves the input field empty and clicks Submit button, will display an error message(manadatory fields). The input line will also change the color to red.
+The New recipe page feature, will take the new input in the form,  user can insert by choosing the category name and insert the recipe according to that. All entered data will be stored in MongoDB and redirected to the website's other pages.If the user leaves the input field empty and clicks Submit button, will display an error message"Please fill out this field". The input line will also changes in color to red.
 
 * Choose your category :- field has a list of categories that the user can pick up for their recipe.
 * Recipe Name :-field a user can input 5-30 characters long.
@@ -175,11 +176,11 @@ The New recipe page feature, will take the new input in the form,  user can inse
 * IMG URL :- field the user has to paste image address and has to be 5-300 characters long.
 * Preparation:- Time field a user can input numbers from 0-500.
 * Cooking Time:- field a user can input numbers from 0-120.
-* Serving:- field a user can input numbers from 1-100.
+* Servs:- field a user can input numbers from 1-100.
 * Add recipe:- button has a color change when the user is hovers on the button, and when clicked will display flash message "Recipe successfully Added" routed to the profile page
 
 * ### Edit Recipe
-The Edit recipe has features to edit recipe form same as Edit recipe. Only recipe owners and website admin can edit recipes. There is a CANCEL button that will bring you back to a profile page, and the button save recipe will update the recipe and when clicked will display flash message "Recipe successfully updated" routed to the profile page. All edited data will be stored in MongoDB and redirected to others pages. The form has a placeholder with an icon that will move up when the user clicks into the field. If the user leaves the input field empty and clicked submit button will display an error message, also the input line change colors.
+The Edit recipe form has features same as Add recipe. Only recipe owners and website admin can edit recipes. There is a CANCEL button that will bring you back to a profile page, and the button save recipe will update the recipe and when clicked will display flash message "Recipe successfully updated" routed to the profile page. All edited data will be stored in MongoDB and redirected to others pages.If the user leaves the input field empty and clicked submit button will display an error message "Please fill out this field", also the input line changes in color.
 
 * Choose your category :- field has a list of categories that the user can pick up for their recipe.
 * Recipe Name :-in this field a user can input 5-30 characters long.
@@ -187,26 +188,26 @@ The Edit recipe has features to edit recipe form same as Edit recipe. Only recip
 * Instructions:- in this field a user can input 5- 5000 characters long text and can be separated on a new line for final display all text into an array.
 * IMG URL :- in this field the user has to paste image address and has to be 5-300 characters long.
 * Preparation Time :- in this field a user can input numbers from 0-500.
-* Cooking Time:- in this field a user can input numbers from 0-120.
-* Serving:- field a user can input numbers from 1-100.
+* Cook Time:- in this field a user can input numbers from 0-120.
+* Servs:- field a user can input numbers from 1-100.
 * Save Recipe button has color change when the user hovers on the button, redirected user to show recipe page with new changes that user has made.
 * CANCEL button redirected back to the show recipe page.
 
 * Delete Recipe
 The delete button is next to edit button in show recipe page.
-when user clicks on this button the message is popped out for confirmation of deletion of the recipe and the pop up window has two options Ok and Cancel. when user clicks Ok the recipe will be deleted and flash message is "Recipe successfully deleted" when user clicks cancel it routes back to show recipe page.Only recipe owners and website admin can delete recipes.
+when user clicks on this button the message is popped out for confirmation of deletion of the recipe and the pops up window "Do you want to delete (recipe name)" and has two options Ok and Cancel. when user clicks Ok the recipe will be deleted and flash message is "Recipe successfully deleted" when user clicks cancel it routes back to show recipe page.Only recipe owners and website admin can delete recipes.
 
 
 * ### Login page
-The Login page feature will help the user to login to the website and if the user enters wrong username / password the flash message will pop out to alert to user to enter the correct credentials. The username field has to be a 5-15 character long string, Error message is displayed to enter manadatory fields(if nothing is entered). Clicking the login button the user will be routed to the user's profile page.There is a link to the Register page, below the login form. Clicking that link the user will be routed to the Register page.
+The Login page feature will help the user to login to the website and if the user enters wrong username / password the flash message will pop out"Incorrect username/password" to alert user to enter the correct credentials. The username field has to be a 5-15 character long string, Error message is displayed to enter mandatory fields(if nothing is entered). Clicking the login button the user will be routed to the user's profile page.There is a link to the Register page, below the login form. Clicking that link the user will be routed to the Register page.
 
 * ### Register page
 The register page  feature will help first time user to register to the page and create a login. username field is a string which has to be 5-15 characters long, including lower and upper case and any number(alphanemeric)
-Error message is displayed to enter manadatory fields(if nothing is entered).
-if the user enters wrong username / password the flash message will pop out to alert to user to enter the correct credentials. Clicking the register button the user will be routed to the user's profile page and flash message diplays "Registration successfull"
+Error message is displayed to enter mandatory fields(if nothing is entered).
+if the user enters wrong username / password the flash message will pop out to alert  user to enter the correct credentials. Clicking the register button the user will be routed to the user's profile page and flash message diplays "Registration successfull"
 
 * ### Manage Categories
-Manage Categories page feature is only accessible to admin. If clicked on manage categories it will route to get categories page and displays all categories that admin has created. In the category card, there is a category name and two buttons Edit and Delete (for exiesting categories) and there is Add Category button when clicked which will route the admin to add category page. 
+Manage Categories page feature is only accessible to admin. If clicked on manage categories it will route to get categories page and displays all categories that admin has created. In the category card, there is a category name and two buttons Edit and Delete (for existing categories) and there is Add Category button when clicked which will route the admin to add category page. 
 
 * Clicking on the Edit button the admin will be routed to the Edit category page.
 * Clicking on the Delete button, the confirmation message will pop up with two buttons: Agree and Close.
@@ -214,17 +215,17 @@ Manage Categories page feature is only accessible to admin. If clicked on manage
 * Clicking on the Close button the confirmation message will be closed and the admin will stay on the same page.
 
 * ### Add Category
-Add Category page feature is only accessible to admin. In the Add category page, the admin can input 3-25 characters long text, and a single button to submit a new category is ADD CATEGORY. When admin clicks the button, it will be routed to the Manage category page and the new category will be displayed in alphabetical order. Flash message displays "New Category Added" Also, this category will be displayed for users in the add new recipe page, in Choose your category dropdown.
+Add Category page feature is only accessible to admin. In the Add category page, the admin can input 3-25 characters long text, and a single button to submit a new category is "Add category". When admin clicks the button, it will be routed to the Manage category page and the new category will be displayed in alphabetical order. Flash message displays "New Category Added" Also, this category will be displayed for users in the add new recipe page, in Choose your category dropdown.
 
 * ### Edit Category
 In the Edit Category page, the admin can edit the text and the final input has to be a 3-25 characters long text. There are two buttons: Cancel and Edit Category.
 
 * Clicking the Cancel button, the admin will be routed back to the Manage Categories page.
-* Clicking Edit button, the newly entered text will be updated and admin will be routed to the manage category page , flash message displays "Category successfully updated" the category card will be displayed in alphabetical order. And also this category will be displayed for users in the add new recipe page, Choose your category list.
+* Clicking Edit button, the newly entered text will be updated and admin will be routed to the manage category page , flash message displays "Category successfully updated" the category card will be displayed in alphabetical order. And also this category will be displayed for users in the add new recipe page, "Choose your category" list.
 
  * Delete category
 The delete button is next to edit button in get categories page.
-when user clicks on this button the message is popped out for confirmation of deletion of the category and the pop up window has two options Agree and Close. when user clicks Agree the category will be deleted and flash message is "Category successfully deleted" when user clicks close it routes back to get categories page.Only admin can delete categories.
+when user clicks on this button the message is popped out for confirmation of deletion of the category and the pop up window has two options Agree and Close. when user clicks Agree the category will be deleted and flash message is "Category successfully deleted" when user clicks close, it routes back to Manage Categories page.Only admin can delete categories.
 
 * ### Footer
 The footer feature have social media links and copyright information. when clicked the social links opens on the new tab.
@@ -233,7 +234,7 @@ The footer feature have social media links and copyright information. when click
 
  ### Home Page :- 
 * The background Image of the home page which will be more attractive.
-*  The buttons below the recipes card after screen scrolls down, there will be Click on next page next symbol or page numbers.
+* Click on next page button or click on  page numbers at the bottom of the page which is easy to click than scrolling down the entire page.
 * Recipe Blog on Nav bar
 
  ### Profile Page :-
@@ -282,7 +283,7 @@ ___
         * As a registered user to the cook book website, I want to have my profile, that I can easily find all the recipes I have added.
             * Once user creates login user is navigated to uers's profile page which is easily acessible on nav bar.
         * As a registered user to the cook book website, I want to have a home page where I can view the snapshot of other users' recipes that looks good.
-            * Once the user log into the webpage user can easily access the Home page.
+            * Once the user log into the webpage user can easily access the Home page, which has all recipes displayed.
         * As a registered user to the cook book website, I want to have a "show more" button on all the recipe snapshots, that shows the complete details of the recipe I am interested in.
             * Once the user log in to the webpage user can see recipe cards in which each card will have "show more" button which is easily accessible.
         * As a registered user to the cook book website, I want to use the search panel to find recipes by category name, recipe name and ingredient.
@@ -294,31 +295,31 @@ ___
 
 * ### **Functionality testing**
     * ### Manual Testing
-        * ### Home Page
+        * #### Home Page
             * Navigation Bar :-The Materialize navbar is fixed and is visible across all pages and on all screen size devices and is working as expected and it collapses into a hamburger menu on Tablets and smaller devices.
             * Login menu :- when clicked redirects to login page as expected
-            * Register Menu :- when clicked Redirects to Register page as expected
-            * The brand logo :- when clicked redirects to the Home page works as expected.
-            * New recipe : when clicked Add recipe and to fill form works as expected
-            * Manage categories(Only for admin):- when clicked routes to get categories page and deplays the list of categories in the page works as expected.
-            * logout :- when clicked it routes to login page and displays flash message "You have been logged out"
+            * Register Menu :- when clicked, Redirects to Register page as expected
+            * The brand logo :- when clicked, redirects to the Home page, works as expected.
+            * New recipe : when clicked, form is displayed to add recipe and works as expected
+            * Manage categories(Only for admin):- when clicked, routes to get categories page and deplays the list of categories in the page, works as expected.
+            * logout :- when clicked, it routes to login page and displays flash message "You have been logged out"
             * Footer bar :- The footer is fixed and visible on all navigated pages and in all screen devices. It consists of four social links.
-            When clicked on social links it opens in a new tab of respective social link works as expected.
+            When clicked on social links it opens in a new tab of respective social link, works as expected.
             * Search button :-Tried and tested by giving input of recipe name category name and Ingredients.
-            when typed non existing recipes the error is displayed as "No results found". Clicking on the Search button without entering any value - "Please fill out this field message2 is displayed, prompting users to enter a value, works as expected.
+            when typed non existing recipes the error is displayed as "No results found". Clicking on the Search button without entering any value - "Please fill out this field message" is displayed, prompting users to enter a value, works as expected.
             * Reset button :- when clicked it resets the value given in serach field and refreshes to get recipes page, works as expected.
             * Show more button on individual recipe card :-
             when clicked it routes to Login page (if user have logged in)
-            when clicked it routes to show recipe (if user is already logged in ) page and dsiplays user's recipe information, works as expected.
+            when clicked it routes to show recipe (if user is already logged in ) page and displays user's recipe information, works as expected.
 
-        * ### Profile Page
+        * #### Profile Page
 
             * Clicking on the navigation bar's Profile link has been routed to the user's profile page, works as expected.
             * Clicking on Profile page, recipes card show more button, has been routed to the show recipe page, works as expected.
             * Edit button and delete Button in show recipe page.
                 * Edit :- Routes to edit recipe page works as expected.
                 * Delete :- Pops up a window for confirmation for deletion, works as expected.
-        * ### New Recipe page
+        * #### New Recipe page
 
             * Clicking on the navigation bar's New Recipe link has been routed to the add new recipe page.
                 * Clicking add Recipe Category field, the user can choose the category from the list.
@@ -326,43 +327,43 @@ ___
                 * Clicking on the Recipe Ingredients field, the user can enter the recipe ingredients, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
                 * Clicking on the Recipe Instructions field, the user can enter the recipe instructions, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
                 * Clicking on the recipe Image URL field, the user can paste the recipe IMG URL. Added an invalid URL or longer than 300 characters should display an error message.
-                * Clicking on the recipe Prepare Time field, the user can enter numbers between 0-500 min. Trying to add number out of range should display an error message.
+                * Clicking on the recipe Preperation Time field, the user can enter numbers between 0-500 min. Trying to add number out of range should display an error message.
                 * Clicking on the recipe Cook Time field, the user can enter numbers between 0-120 min. Trying to add number out of range should display an error message.
-                * Clicking on the recipe Serving field, the user can enter numbers between 1-100. Trying to add number out of range should display an error message.
-                * Clicking Add recipe button to add a new recipe, the user will redirected to the Show Recipe page. 
+                * Clicking on the recipe Serve field, the user can enter numbers between 1-100. Trying to add number out of range should display an error message.
+                * Clicking Add recipe button to add a new recipe, the user will be redirected to the Show Recipe page. 
 
                 All above fields of Add recipe works as expected.
 
-        * ### Edit Recipe in show recipe page of user's profile.
+        * #### Edit Recipe in show recipe page of user's profile.
             * Clicking on Edit button it routes to edit recipe page.
             * Category field of Edit recipe page, the user can choose the category from the list.
             * Clicking on the Edit Recipe Name field, the user can enter the recipe name, which must be length between 5-30 characters. Display error message when characters are above the range.
             * Clicking on the Edit Recipe Ingredients field, the user can enter the recipe ingredients, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
             * Clicking on the Edit Recipe Instructions field, the user can enter the recipe instructions, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
             * Clicking on the Edit recipe Image URL field, the user can paste the recipe IMG URL. Added an invalid URL or longer than 300 characters should display an error message.
-            * Clicking on the Edit recipe Prepare Time field, the user can enter numbers between 0-500 min. Trying to add number out of range should display an error message.
+            * Clicking on the Edit recipe Preperation Time field, the user can enter numbers between 0-500 min. Trying to add number out of range should display an error message.
             * Clicking on the Edit recipe Cook Time field, the user can enter numbers between 0-120 min. Trying to add number out of range should display an error message.
-            * Clicking on the Edit recipe Serving field, the user can enter numbers between 1-100. Trying to add number out of range should display an error message.
-            * Clicking Save recipe button to save teh changes made, the user will be redirected to the Show Recipe page. 
-        * ### Delete Recipe in show recipe page of user's profile.
+            * Clicking on the Edit recipe Serve field, the user can enter numbers between 1-100. Trying to add number out of range should display an error message.
+            * Clicking Save recipe button to save the changes made, the user will be redirected to the Show Recipe page. 
+        * #### Delete Recipe in show recipe page of user's profile.
             * Clicking on the Delete recipe button, window pops up for the confirmation of deletion.By clicking ok, this will route to Show recipe page and Flash message will be displayed
         
             **All above fields of Edit recipe works as expected**.
 
-        * ### Manage categories(will be reflected to admin only)
-            * Clicking on the navigation bar's Manage Categories link(only admin has access), has been routed to the categories page only admin has access to this link.
+        * #### Manage categories(will be reflected to admin only)
+            * Clicking on the navigation bar's Manage Categories link it will be routed to the categories page. only admin has access to this link.
             * Clicking the Add category button, the website admin has permission to do that and will be routed to the Add category page.
 
-        * ### Add category
+        * #### Add category
             * Clicking the Category Name field, the admin can enter 3-25 characters long text. Display error message if the text is out of the range.
             * Clicking the Add category  button, the admin has been routed to the categories page and the new category will be added in alphabetical order.Flash message will be displayed
 
-        * ### Edit category
+        * #### Edit category
             * Clicking the Edit category button, the website admin has permission to do that and will be routed to the Edit category page.
             * Clicking the CANCEL button, the admin will be routed back to the categories page.
             * Clicking the Save Category button, the admin has been routed to the categories page and the edited category will be added in alphabetical order.Flash message will be displayed.
 
-        * ### Delete Category in admin's profile.
+        * #### Delete Category in admin's profile.
 
             * Clicking on the Delete category button, window pops up for the confirmation of deletion.By clicking Agree, this will route to categories page and Flash message will be displayed
 
@@ -426,7 +427,7 @@ Press Enter , your local clone will be created.
 ### **Deployment to Heroku**
 * **Set up workspace for Heroku**:
 
-    * In the terminal window of IDE, create a requirements.txt file to contain all applications and dependencies required to run the app.
+    * In the terminal window of IDE, create a requirements.txt file to store all applications and dependencies required to run the app.
     *        pip3 freeze --local . requirements.txt
 
     * Create a Procfile (strictly capital P and no file extension!) - required by Heroku, to know which file runs the app.
@@ -457,12 +458,13 @@ In the IDE terminal, push the two new files to the GitHub repository:
 * Now go back to Heroku and click on Enable Automatic Deployment and Deploy Branch.
 
 * The app is now connected and Heroku will receive the code from GitHub and automatically update whenever changes is pushed to the GitHub repository. You should be able to see "Your app was successfully deployed!". Click on View to launch your app.
+* Click on Open App to test your deployed website.
 
 
 
 ### **Creating env file**
 
-Install Flask, in the terminal type pip3 install Flask , this will install Flask functionality. Create env.py file for storing sensitive data, type touch env.py in terminal. This file should never be pushed to GitHub, so type touch .gitignore to ignore it. Than open the .gitignore file and ignore your env.py file type:
+Install Flask, in the terminal type pip3 install Flask , this will install Flask functionality. Create env.py file for storing sensitive data, type touch env.py in terminal. This file should never be pushed to GitHub, so type touch .gitignore to ignore it. Then open the .gitignore file and ignore your env.py file type:
 
 ![plot](static/images/gitignore.png)
 
@@ -522,8 +524,8 @@ ____
 ### Design
 ___
 
-* Andrius-siup Recipe book
-* Nazulka for WDBuzzwords for website testing 
+* Design Inspiration from Andrius-siup's Recipe book
+* Readme Inspiration from Nazulka's WDBuzzwords for website testing 
 
 
 ## References
