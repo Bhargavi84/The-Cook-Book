@@ -281,6 +281,9 @@ ul.social li a i {
 		font-size: 10px;
 	}
 
+	.input-field.col.s12 label {
+		margin-top: -1rem;
+	}
 }
 
 @media(max-width: 280px) {
