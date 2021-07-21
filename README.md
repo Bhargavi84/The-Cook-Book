@@ -202,7 +202,7 @@ The footer feature have social media links and copyright information. when click
  ### Login page / Register page
  * Password will include special characters.
  * Email address field to get to know latest news and updates.
-
+ * once logged in "New recipe added by some user" pop up.
 
 
 # **Testing**
@@ -219,13 +219,90 @@ ___
 * ### **Testing user stories**
 * ### **Functionality testing**
     * ### Manual Testing
+        * ### Home Page
+            * Navigation Bar :-The Materialize navbar is fixed and is visible across all pages and on all screen size devices and is working as expected and it collapses into a hamburger menu on Tablets and smaller devices.
+            * Login menu :- when clicked redirects to login page as expected
+            * Register Menu :- when clicked Redirects to Register page as expected
+            * The brand logo :- when clicked redirects to the Home page works as expected.
+            * New recipe : when clicked Add recipe and to fill form works as expected
+            * Manage categories(Only for admin):- when clicked routes to get categories page and deplays the list of categories in the page works as expected.
+            * logout :- when clicked it routes to login page and displays flash message "You have been logged out"
+            * Footer bar :- The footer is fixed and visible on all navigated pages and in all screen devices. It consists of four social links.
+            When clicked on social links it opens in a new tab of respective social link works as expected.
+            * Search button :-Tried and tested by giving input of recipe name category name and Ingredients.
+            when typed non existing recipes the error is displayed as "No results found". Clicking on the Search button without entering any value - "Please fill out this field message2 is displayed, prompting users to enter a value, works as expected.
+            * Reset button :- when clicked it resets the value given in serach field and refreshes to get recipes page, works as expected.
+            * Show more button on individual recipe card :-
+            when clicked it routes to Login page (if user have logged in)
+            when clicked it routes to show recipe (if user is already logged in ) page and dsiplays user's recipe information, works as expected.
+
+        * ### Profile Page
+
+            * Clicking on the navigation bar's Profile link has been routed to the user's profile page, works as expected.
+            * Clicking on Profile page, recipes card show more button, has been routed to the show recipe page, works as expected.
+            * Edit button and delete Button in show recipe page.
+                * Edit :- Routes to edit recipe page works as expected.
+                * Delete :- Pops up a window for confirmation for deletion, works as expected.
+        * ### New Recipe page
+
+            * Clicking on the navigation bar's New Recipe link has been routed to the add new recipe page.
+                * Clicking add Recipe Category field, the user can choose the category from the list.
+                * Clicking on the Recipe Name field, the user can enter the recipe name, which must be length between 5-30 characters. Display error message when characters are above the range.
+                * Clicking on the Recipe Ingredients field, the user can enter the recipe ingredients, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
+                * Clicking on the Recipe Instructions field, the user can enter the recipe instructions, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
+                * Clicking on the recipe Image URL field, the user can paste the recipe IMG URL. Added an invalid URL or longer than 300 characters should display an error message.
+                * Clicking on the recipe Prepare Time field, the user can enter numbers between 0-500 min. Trying to add number out of range should display an error message.
+                * Clicking on the recipe Cook Time field, the user can enter numbers between 0-120 min. Trying to add number out of range should display an error message.
+                * Clicking on the recipe Serving field, the user can enter numbers between 1-100. Trying to add number out of range should display an error message.
+                * Clicking Add recipe button to add a new recipe, the user will redirected to the Show Recipe page. 
+
+                All above fields of Add recipe works as expected.
+
+        * ### Edit Recipe in show recipe page of user's profile.
+                * Clicking on Edit button it routes to edit recipe page.
+                * Category field of Edit recipe page, the user can choose the category from the list.
+                * Clicking on the Edit Recipe Name field, the user can enter the recipe name, which must be length between 5-30 characters. Display error message when characters are above the range.
+                * Clicking on the Edit Recipe Ingredients field, the user can enter the recipe ingredients, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
+                * Clicking on the Edit Recipe Instructions field, the user can enter the recipe instructions, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
+                * Clicking on the Edit recipe Image URL field, the user can paste the recipe IMG URL. Added an invalid URL or longer than 300 characters should display an error message.
+                * Clicking on the Edit recipe Prepare Time field, the user can enter numbers between 0-500 min. Trying to add number out of range should display an error message.
+                * Clicking on the Edit recipe Cook Time field, the user can enter numbers between 0-120 min. Trying to add number out of range should display an error message.
+                * Clicking on the Edit recipe Serving field, the user can enter numbers between 1-100. Trying to add number out of range should display an error message.
+                * Clicking Save recipe button to save teh changes made, the user will be redirected to the Show Recipe page. 
+        * ### Delete Recipe in show recipe page of user's profile.
+                * Clicking on the Delete recipe button, window pops up for the confirmation of deletion.By clicking ok, this will route to Show recipe page and Flash message will be displayed
+
+                All above fields of Edit recipe works as expected.
+
+        * ### Manage categories(will be reflected to admin only)
+            * Clicking on the navigation bar's Manage Categories link(only admin has access), has been routed to the categories page only admin has access to this link.
+            * Clicking the Add category button, the website admin has permission to do that and will be routed to the Add category page.
+
+        * ### Add category
+            * Clicking the Category Name field, the admin can enter 3-25 characters long text. Display error message if the text is out of the range.
+            * Clicking the Add category  button, the admin has been routed to the categories page and the new category will be added in alphabetical order.Flash message will be displayed
+
+        * ### Edit category
+            * Clicking the Edit category button, the website admin has permission to do that and will be routed to the Edit category page.
+            * Clicking the CANCEL button, the admin will be routed back to the categories page.
+            * Clicking the Save Category button, the admin has been routed to the categories page and the edited category will be added in alphabetical order.Flash message will be displayed.
+
+        * ### Delete Category in admin's profile.
+
+            * Clicking on the Delete category button, window pops up for the confirmation of deletion.By clicking Agree, this will route to categories page and Flash message will be displayed
+
+        All above fields of Manage categories works as expected.
+
     * ### Defensive design testing
+        * Registration attempt with an existing Username
+        !plot[](static/images/register.png)
+
 * ### **Responsiveness**
     The responsiveness of the website was tested physically on Laptops, Desktops, Big screen, Mobile, Tablets and also using Am I Responsive tool as well as Google Dev Tools Device Mode.
     The website fits and adapts well to the different viewport size devices.
     ![plot](static/images/responsive.png)
 * ### **Usability Testing**
-    * This website have been shared to family and friends to add, read, edit and delete recipes none of then experienced any issues during the testing process and it was confirmed that the website was easy to use and navigate. They were able to effectively use the interactive elements of the website, find the information they were looking for and easily understand the purpose of the website. 
+    * This website have been shared to family and friends to add, read, edit and delete recipes none of them experienced any issues during the testing process and it was confirmed that the website was easy to use and navigate. They were able to effectively use the interactive elements of the website, find the information they were looking for and easily understand the purpose of the website. 
 * ### **Performance testing**
     Performance testing was carried out using Lighthouse in Chrome Developer Tools.
     * Desktop Performance was excellent in accessibility.
