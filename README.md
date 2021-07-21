@@ -23,7 +23,7 @@ ____
     * [Database Diagram](#database-diagram)
 * [Surface](#surface)
 * [Technologies](#technologies-used) 
-* [Features](#feautures) 
+* [Features](#features) 
 * [Testing](#testing)
 * [Deployment](#deployment)
 * [Credits](#credits)
@@ -111,6 +111,7 @@ ___
 * [Heroku](https://id.heroku.com/) - used to deploy the website.
 
 # **Features**
+
   ###  Existing Features
  ___
  * ### Navigation bar
@@ -189,16 +190,16 @@ The footer feature have social media links and copyright information. when click
 
 ### Features left to Implement
 
-* ### Home Page :- 
+ ### Home Page :- 
 * The background Image of the home page which will be more attractive.
 *  The buttons below the recipes card after screen scrolls down, there will be Click on next page next symbol or page numbers.
 * Recipe Blog on Nav bar
 
-* ### Profile Page :-
+ ### Profile Page :-
 * The image of the user, contact details like email or phone number
 * sorted recipe cards according to category and unique recipes
 
-* ### Login page / Register page
+ ### Login page / Register page
  * Password will include special characters.
  * Email address field to get to know latest news and updates.
 
