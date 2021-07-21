@@ -62,15 +62,15 @@ ____
 *   As an admin of the website, I want to have Log In functions, that I can have my own profile.
 *   As an admin of the website, I want to add my own recipe and share it with other users from the website.
 *   As an admin of the website, I want to edit my recipe if any discripencies.
-*   As an admin of the website, I want to remove my recipe, if I think that I don't want that others see this recipe.
-*   As an admin of the website, I want to have access to edit/remove user's recipes, if I think that the recipe is can not be public.
-*   As an admin of the website, I want to have the ability to create, edit or remove categories for recipes that will be help users will be easily sorted or found recipes.
+*   As an admin of the website, I want to remove my recipe, if I think that I don't want others to see the recipe.
+*   As an admin of the website, I want to have access to edit/delete user's recipes, if I think that is offensive or sensitive to the public.
+*   As an admin of the website, I want to have the ability to create, edit or delete categories for recipes that will help users to sort and find  recipes.
 *   As an admin of the website, I want to get a confirmation message before deleting a recipe or category.
 *As an admin of the website, I want to have my own profile, that I can find all my recipes.
 *   As an admin of the website, I want to view others user's recipes, to try if image is appropriate to the recipe added.
 *   As an admin of the website, I want to get security features, that if I duplicate a page for some reason and Log Out on one page, that others pages also will be logged out.
 *   As an admin of the website, I want to use the search panel to find recipes by category name, recipe name and ingredient.
-*   As an admin of the website, I want to see social media links, to contact or follow the website on social media.
+*   As an admin of the website, I want to regularly update social media links, to users to contact the website on social media.
 
 
 
@@ -258,6 +258,10 @@ ___
     * PEP8 online [Pass](http://pep8online.com/)
 
 * ### **Testing user stories**
+
+    * ### Registered users
+    
+
 * ### **Functionality testing**
     * ### Manual Testing
         * ### Home Page
@@ -300,20 +304,20 @@ ___
                 All above fields of Add recipe works as expected.
 
         * ### Edit Recipe in show recipe page of user's profile.
-                * Clicking on Edit button it routes to edit recipe page.
-                * Category field of Edit recipe page, the user can choose the category from the list.
-                * Clicking on the Edit Recipe Name field, the user can enter the recipe name, which must be length between 5-30 characters. Display error message when characters are above the range.
-                * Clicking on the Edit Recipe Ingredients field, the user can enter the recipe ingredients, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
-                * Clicking on the Edit Recipe Instructions field, the user can enter the recipe instructions, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
-                * Clicking on the Edit recipe Image URL field, the user can paste the recipe IMG URL. Added an invalid URL or longer than 300 characters should display an error message.
-                * Clicking on the Edit recipe Prepare Time field, the user can enter numbers between 0-500 min. Trying to add number out of range should display an error message.
-                * Clicking on the Edit recipe Cook Time field, the user can enter numbers between 0-120 min. Trying to add number out of range should display an error message.
-                * Clicking on the Edit recipe Serving field, the user can enter numbers between 1-100. Trying to add number out of range should display an error message.
-                * Clicking Save recipe button to save teh changes made, the user will be redirected to the Show Recipe page. 
+            * Clicking on Edit button it routes to edit recipe page.
+            * Category field of Edit recipe page, the user can choose the category from the list.
+            * Clicking on the Edit Recipe Name field, the user can enter the recipe name, which must be length between 5-30 characters. Display error message when characters are above the range.
+            * Clicking on the Edit Recipe Ingredients field, the user can enter the recipe ingredients, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
+            * Clicking on the Edit Recipe Instructions field, the user can enter the recipe instructions, which must be length between 5-5000 characters. All text can be separated on the new line. Display error message when characters are above the range.
+            * Clicking on the Edit recipe Image URL field, the user can paste the recipe IMG URL. Added an invalid URL or longer than 300 characters should display an error message.
+            * Clicking on the Edit recipe Prepare Time field, the user can enter numbers between 0-500 min. Trying to add number out of range should display an error message.
+            * Clicking on the Edit recipe Cook Time field, the user can enter numbers between 0-120 min. Trying to add number out of range should display an error message.
+            * Clicking on the Edit recipe Serving field, the user can enter numbers between 1-100. Trying to add number out of range should display an error message.
+            * Clicking Save recipe button to save teh changes made, the user will be redirected to the Show Recipe page. 
         * ### Delete Recipe in show recipe page of user's profile.
-                * Clicking on the Delete recipe button, window pops up for the confirmation of deletion.By clicking ok, this will route to Show recipe page and Flash message will be displayed
-
-                All above fields of Edit recipe works as expected.
+            * Clicking on the Delete recipe button, window pops up for the confirmation of deletion.By clicking ok, this will route to Show recipe page and Flash message will be displayed
+        
+            **All above fields of Edit recipe works as expected**.
 
         * ### Manage categories(will be reflected to admin only)
             * Clicking on the navigation bar's Manage Categories link(only admin has access), has been routed to the categories page only admin has access to this link.
@@ -332,7 +336,7 @@ ___
 
             * Clicking on the Delete category button, window pops up for the confirmation of deletion.By clicking Agree, this will route to categories page and Flash message will be displayed
 
-        All above fields of Manage categories works as expected.
+            **All above fields of Manage categories works as expected**.
 
     * ### Defensive design testing
         * Registration attempt with an existing Username
