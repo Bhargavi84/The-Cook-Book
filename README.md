@@ -295,7 +295,19 @@ ___
 
     * ### Defensive design testing
         * Registration attempt with an existing Username
-        !plot[](static/images/register.png)
+
+        ![plot](static/images/register.png)
+
+        * Login attempt with an unmatching Username / Password fields
+
+        ![plot](static/images/login.png)
+
+        * Confirmation delete modal pops up when users attempt to delete the recipe from the webpage to avoid accidental deletion.
+
+        ![plot](static/images/delete-recipe.png)
+
+        * Search results error when user attempts to find which is irrelavant to cooking or recipes.
+        ![plot](static/images/search-error.png)
 
 * ### **Responsiveness**
     The responsiveness of the website was tested physically on Laptops, Desktops, Big screen, Mobile, Tablets and also using Am I Responsive tool as well as Google Dev Tools Device Mode.
