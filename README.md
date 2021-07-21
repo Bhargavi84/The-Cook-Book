@@ -41,20 +41,19 @@ ____
 ## **User stories - guest users/non-registered users**
 *   As a guest user to the cook book website, I want to easily navigate through the site, so that I can find the recipe I need that are created by other users of the webiste.
 *   As a guest user to the cook book website, I want register/log-in functions, so that I can have my own profile created.
-*   As a guest user to the cook book website, I want to use the search panel to found recipes by category or by ingredient.
+*   As a guest user to the cook book website, I want to use the search panel to find recipes by category or by ingredient.
 *   As a guest user to the cook book website, I want to see the links to different social media accounts, to contact or follow the website on social media.
 ## **User stories - registered users**
 *   As a registered user to the cook book website, I want to easily navigate through the site, so that I can find the recipe I need that are created by other users of the webiste.
 *   As a registered user to the cook book website, I want to have log-in function, using which in can access my profile.
 *   As a registered user to the cook book website, I want to insert my own recipe and share it with others users from the website.
-*   As a registered user to the cook book website, I want to edit my recipe if I make a mistake for some reason.
+*   As a registered user to the cook book website, I want to edit my recipe if any discripencies.
 *   As a registered user to the cook book website, I want to delete my recipe, if I think that I don't want to have this recipe listed.
 *   As a registered user to the cook book website, I want to have my profile, that I can easily find all the recipes I have added.
 *   As a registered user to the cook book website, I want to have a home page where I can view the snapshot of other users' recipes that looks good.
 *   As a registered user to the cook book website, I want to have a "show more" button on all the recipe snapshots, that shows the complete details of the recipe I am interested in.
 *   As a registered user to the cook book website, I want to get security features, that if I duplicate a page for some reason and Log Out on one page, that others pages also will be logged out.
-*   As a registered user to the cook book website, I want to get security features, that others PC users can't come in in my profile from the browser history.
-*   As a registered user to the cook book website, I want to use the search panel to find recipes by an ingredient or by a name or part of the name.
+*   As a registered user to the cook book website, I want to use the search panel to find recipes by category name, recipe name and ingredient.
 *   As a registered user of the website, I want to see social media links, to contact or follow the website on social media.
 *   As a registered user to the cook book website, I want to get a confirmation message before deleting the recipe.
 
@@ -70,7 +69,7 @@ ____
 *As an admin of the website, I want to have my own profile, that I can find all my recipes.
 *   As an admin of the website, I want to view others user's recipes, to try if image is appropriate to the recipe added.
 *   As an admin of the website, I want to get security features, that if I duplicate a page for some reason and Log Out on one page, that others pages also will be logged out.
-*   As an admin of the website, I want to use the search panel to find recipes by category name, recipe name and ingredients.
+*   As an admin of the website, I want to use the search panel to find recipes by category name, recipe name and ingredient.
 *   As an admin of the website, I want to see social media links, to contact or follow the website on social media.
 
 
