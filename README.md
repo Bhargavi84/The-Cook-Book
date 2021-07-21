@@ -234,7 +234,7 @@ The footer feature have social media links and copyright information. when click
 
  ### Home Page :- 
 * The background Image of the home page which will be more attractive.
-* Click on next page button or click on  page numbers at the bottom of the page which is easy to click than scrolling down the entire page.
+* Pagination.
 * Recipe Blog on Nav bar
 
  ### Profile Page :-
