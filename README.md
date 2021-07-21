@@ -150,9 +150,9 @@ The Edit recipe has features to edit recipe form same as Edit recipe. Only recip
 * Save Recipe button has color change when the user hovers on the button, redirected user to show recipe page with new changes that user has made.
 * CANCEL button redirected back to the show recipe page.
 
-* ### Delete Recipe
+* Delete Recipe
 The delete button is next to edit button in show recipe page.
-when user clicks on this button the message is popped out for confirmation of deletion of the recipe and the pop up window has two options Ok and Cancel when user clicks Ok the recipe will be deleted and flash message is "Recipe successfully deleted" when user clicks cancel it routes back to show recipe page.Only recipe owners and website admin can delete recipes.
+when user clicks on this button the message is popped out for confirmation of deletion of the recipe and the pop up window has two options Ok and Cancel. when user clicks Ok the recipe will be deleted and flash message is "Recipe successfully deleted" when user clicks cancel it routes back to show recipe page.Only recipe owners and website admin can delete recipes.
 
 
 * ### Login page
@@ -179,6 +179,29 @@ In the Edit Category page, the admin can edit the text and the final input has t
 
 * Clicking the Cancel button, the admin will be routed back to the Manage Categories page.
 * Clicking Edit button, the newly entered text will be updated and admin will be routed to the manage category page , flash message displays "Category successfully updated" the category card will be displayed in alphabetical order. And also this category will be displayed for users in the add new recipe page, Choose your category list.
+
+ * Delete category
+The delete button is next to edit button in get categories page.
+when user clicks on this button the message is popped out for confirmation of deletion of the category and the pop up window has two options Agree and Close. when user clicks Agree the category will be deleted and flash message is "Category successfully deleted" when user clicks close it routes back to get categories page.Only admin can delete categories.
+
+* ### Footer
+The footer feature have social media links and copyright information. when clicked the social links opens on the new tab.
+
+### Features left to Implement
+
+* ### Home Page :- 
+* The background Image of the home page which will be more attractive.
+*  The buttons below the recipes card after screen scrolls down, there will be Click on next page next symbol or page numbers.
+* Recipe Blog on Nav bar
+
+* ### Profile Page :-
+* The image of the user, contact details like email or phone number
+* sorted recipe cards according to category and unique recipes
+
+* ### Login page / Register page
+ * Password will include special characters.
+ * Email address field to get to know latest news and updates.
+
 
 
 # **Testing**
