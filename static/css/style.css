@@ -2,7 +2,7 @@
 
 /*--------Body------*/
 
-body{
+body {
 	
 	display: flex;
 	min-height: 100vh;
@@ -27,7 +27,7 @@ main {
 	background-color:#00293C;
 }
 
-.nav ul a{
+.nav ul a {
 	font-size: 1.3rem;
 
 }
@@ -59,7 +59,7 @@ main {
 
 }
 
-h6{
+h6 {
 	font-size: 18px;
 }
 
