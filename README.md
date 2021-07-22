@@ -533,10 +533,11 @@ ____
 
 
 * Inspiration by Task Manager Mini Project from Code Institute.
-* The below script was borrowed from code institute mini project.
+* The below script was borrowed from code institute's mini project.
 
 ![plot](static/images/tim-code.png)
 
+:arrow_up:[Back-to-top](#contents)
 
 ### Design
 ___
