@@ -236,6 +236,8 @@ The footer feature have social media links and copyright information. when click
 * The background Image of the home page which will be more attractive.
 * Pagination.
 * Recipe Blog on Nav bar
+* Field to promote our brand of kitchen tools
+(e.g. oven, pressure cooker, etc…).
 
  ### Profile Page :-
 * The image of the user, contact details like email or phone number
