@@ -25,6 +25,12 @@ ____
 * [Technologies](#technologies-used) 
 * [Features](#features) 
 * [Testing](#testing)
+    * [Code Vaidity](#code-validity)
+    * [Testing User Stories](#testing-user-stories)
+    * [Functionality testing](#functionality-testing)
+    * [Usability Testing](#usability-testing)
+    * [Performance testing](#performance-testing) 
+
 * [Deployment](#deployment)
 * [Credits](#credits)
 * [Acknowledgements](#acknowledgements)
@@ -72,7 +78,7 @@ ____
 *   As an admin of the website, I want to use the search panel to find recipes by category name, recipe name and ingredient.
 *   As an admin of the website, I want to regularly update social media links, to users to contact the website on social media.
 
-
+:arrow_up:[Back-to-top](#contents)
 
 
 ## **Strategy**
@@ -134,6 +140,7 @@ ___
 
 * #F62A00 **Candy Apple** - used for the Flash Messages, Reset button, Delete buttons and Hover.
 
+:arrow_up:[Back-to-top](#contents)
 
 # **Technologies Used**
 
@@ -151,6 +158,8 @@ ___
 * [Gitpod](https://www.gitpod.io/) - used to built all project.
 * [GitHub](https://github.com/) - used to hosting the website.
 * [Heroku](https://id.heroku.com/) - used to deploy the website.
+
+:arrow_up:[Back-to-top](#contents)
 
 # **Features**
 
@@ -248,6 +257,7 @@ The footer feature have social media links and copyright information. when click
  * Email address field to get to know latest news and updates.
  * once logged in "New recipe added by some user" pop up.
 
+:arrow_up:[Back-to-top](#contents)
 
 # **Testing**
 ___
@@ -294,6 +304,8 @@ ___
             The social link are clearly visible on the footer bar and easily accessible all the time.
         * As a registered user to the cook book website, I want to get a confirmation message before deleting the recipe.
             * once user is logged in , on nav bar click on profile, on the individual recipe card click on show more and it routes to show recipe page where user can see Edit and Delete buttons, Delete button is easily accessible and clearly labelled.
+
+:arrow_up:[Back-to-top](#contents)
 
 * ### **Functionality testing**
     * ### Manual Testing
@@ -387,6 +399,8 @@ ___
         * Search results error when user attempts to find which is irrelavant to cooking or recipes.
         ![plot](static/images/search-error.png)
 
+:arrow_up:[Back-to-top](#contents)
+
 * ### **Responsiveness**
     The responsiveness of the website was tested physically on Laptops, Desktops, Big screen, Mobile, Tablets and also using Am I Responsive tool as well as Google Dev Tools Device Mode.
     The website fits and adapts well to the different viewport size devices.
@@ -400,7 +414,7 @@ ___
     * Mobile - Performance was in average accessibility
     ![plot](static/images/mobile-performance.png)
 
-
+:arrow_up:[Back-to-top](#contents)
 
 
 
@@ -505,6 +519,7 @@ categories, recipes and users.
     * username
     * password
 
+:arrow_up:[Back-to-top](#contents)
 
 
 # **Credits**
@@ -560,3 +575,5 @@ ___
 ___
 
 * This project is purely educational purpose only.
+
+:arrow_up:[Back-to-top](#contents)
